@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoLight from "@/assets/logo-light.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -21,9 +22,11 @@ export function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-xl bg-hero-gradient flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <span className="text-primary-foreground font-display font-bold text-xl">Y</span>
-            </div>
+            <img 
+              src={logoLight} 
+              alt="Y.A.S.H. Logo" 
+              className="w-14 h-14 object-contain"
+            />
             <div className="hidden sm:block">
               <span className="font-display text-xl font-semibold text-foreground">Y.A.S.H.</span>
               <p className="text-xs text-muted-foreground">Unleash the Infinity</p>

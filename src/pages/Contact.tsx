@@ -6,48 +6,51 @@ import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 
+const WHATSAPP_NUMBER = "919923715905";
+const WHATSAPP_MESSAGE = "Hello Dr. Yash! I'm interested in learning more about Y.A.S.H. coaching services. Please share more details.";
+
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@yash.services",
-    href: "mailto:contact@yash.services",
+    value: "contact.teamyash@gmail.com",
+    href: "mailto:contact.teamyash@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 99237 15905",
+    href: "tel:+919923715905",
   },
   {
     icon: MapPin,
     label: "Location",
     value: "Pune, Maharashtra, India",
-    href: null,
+    href: "https://maps.app.goo.gl/ffPpEaePz3cDZF9V6?g_st=aw",
   },
 ];
 
 const socialLinks = [
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube", color: "hover:bg-red-500/10 hover:text-red-500" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram", color: "hover:bg-pink-500/10 hover:text-pink-500" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:bg-blue-500/10 hover:text-blue-500" },
+  { icon: Youtube, href: "https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ", label: "YouTube", color: "hover:bg-red-500/10 hover:text-red-500" },
+  { icon: Instagram, href: "https://www.instagram.com/dr.yashkenjale/", label: "Instagram", color: "hover:bg-pink-500/10 hover:text-pink-500" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/dr-yash-kenjale-950499169/", label: "LinkedIn", color: "hover:bg-blue-500/10 hover:text-blue-500" },
 ];
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    role: "Corporate Professional",
-    content: "Dr. Yash's coaching completely transformed my approach to work and life. I went from feeling stuck and overwhelmed to having clarity and confidence in my decisions.",
+    name: "Shardul Jadhav",
+    role: "Indigo Airlines (Comm)",
+    content: "After completing BCS, I wasn't selected in any campus drive. I struggled to find a job. But after attending Reboot Yourself, my confidence skyrocketed. I manifested a job in communication, and soon got placed at Indigo Airlines as a telecom communicator. Dr. Yash's guidance inspired me so much that I've now started pursuing an MBA while working!",
   },
   {
-    name: "Rahul Mehta",
-    role: "Entrepreneur",
-    content: "The D.E.T.O.X. event was life-changing. The framework gave me tools I use daily to stay focused and aligned with my goals. Highly recommend to anyone serious about growth.",
+    name: "Shreya Ghule",
+    role: "CA Aspirant",
+    content: "After failing CA 2nd year twice and constantly battling acidity, headaches, and low self-esteem, I had almost given up. Reboot Yourself gave me mental clarity, emotional strength, and surprisingly, even my health started improving. I've now completed my CA academics and confidently intern at a CA firm. This workshop truly helped me find myself again.",
   },
   {
-    name: "Anita Desai",
-    role: "Student",
-    content: "As a student struggling with career clarity, the one-on-one sessions helped me understand my strengths and choose a path that truly resonates with me.",
+    name: "Rutuja Nagmode",
+    role: "Team Lead (Tata Tech)",
+    content: "After battling TB, failing 2nd year engineering, and facing rejection in my relationship, I felt completely defeated. Reboot Yourself changed my mindset, restored my confidence, and shifted everything. I completed engineering, got placed at Tata Technologies, became a team lead within a year, convinced my parents, got married, and now own a home in Pune.",
   },
 ];
 
@@ -83,6 +86,11 @@ export default function Contact() {
 
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     setIsSubmitting(false);
+  };
+
+  const handleScheduleCall = () => {
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -237,6 +245,8 @@ export default function Contact() {
                       {info.href ? (
                         <a
                           href={info.href}
+                          target={info.label === "Location" ? "_blank" : undefined}
+                          rel={info.label === "Location" ? "noopener noreferrer" : undefined}
                           className="text-foreground font-medium hover:text-gold transition-colors"
                         >
                           {info.value}
@@ -281,7 +291,7 @@ export default function Contact() {
                   content from our events.
                 </p>
                 <Button variant="hero" size="sm" asChild>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ" target="_blank" rel="noopener noreferrer">
                     Subscribe Now
                   </a>
                 </Button>
@@ -297,10 +307,10 @@ export default function Contact() {
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
               <Sparkles size={18} />
-              Client Reviews
+              Success Stories
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              What Our Clients Say
+              Real Transformations, Real Results
             </h2>
           </div>
 
@@ -311,7 +321,7 @@ export default function Contact() {
                 className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all"
               >
                 <Quote className="w-10 h-10 text-gold/30 mb-4" />
-                <p className="text-foreground mb-6 leading-relaxed">
+                <p className="text-foreground mb-6 leading-relaxed text-sm">
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -321,7 +331,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
+                    <p className="font-semibold text-foreground uppercase text-sm">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
@@ -342,7 +352,7 @@ export default function Contact() {
               Not sure which service is right for you? Let's talk. Schedule a complimentary 
               20-minute call to discuss your goals and explore how we can help.
             </p>
-            <Button variant="gold" size="lg">
+            <Button variant="gold" size="lg" onClick={handleScheduleCall}>
               Schedule Your Call
             </Button>
           </div>
