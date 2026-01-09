@@ -7,8 +7,6 @@ import heroBg from "@/assets/hero-bg.jpg";
 const stats = [
   { number: "1000+", label: "Lives Transformed" },
   { number: "10+", label: "Years Experience" },
-  { number: "50+", label: "Corporate Clients" },
-  { number: "95%", label: "Client Satisfaction" },
 ];
 
 const features = [
@@ -97,7 +95,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex justify-center gap-16 md:gap-24">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">

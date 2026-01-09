@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Youtube, Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import logoLight from "@/assets/logo-light.png";
 
 const footerLinks = {
   navigation: [
@@ -16,9 +17,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ", label: "YouTube" },
+  { icon: Instagram, href: "https://www.instagram.com/dr.yashkenjale/", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/dr-yash-kenjale-950499169/", label: "LinkedIn" },
 ];
 
 export function Footer() {
@@ -29,9 +30,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gold-gradient flex items-center justify-center">
-                <span className="text-foreground font-display font-bold text-xl">Y</span>
-              </div>
+              <img 
+                src={logoLight} 
+                alt="Y.A.S.H. Logo" 
+                className="w-14 h-14 object-contain"
+              />
               <div>
                 <span className="font-display text-xl font-semibold">Y.A.S.H.</span>
                 <p className="text-xs text-primary-foreground/70">Unleash the Infinity</p>
@@ -98,26 +101,31 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-gold mt-0.5 shrink-0" />
                 <a
-                  href="mailto:contact@yash.services"
+                  href="mailto:contact.teamyash@gmail.com"
                   className="text-primary-foreground/80 hover:text-gold transition-colors text-sm"
                 >
-                  contact@yash.services
+                  contact.teamyash@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-gold mt-0.5 shrink-0" />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919923715905"
                   className="text-primary-foreground/80 hover:text-gold transition-colors text-sm"
                 >
-                  +91 98765 43210
+                  +91 99237 15905
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold mt-0.5 shrink-0" />
-                <span className="text-primary-foreground/80 text-sm">
+                <a
+                  href="https://maps.app.goo.gl/ffPpEaePz3cDZF9V6?g_st=aw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/80 hover:text-gold transition-colors text-sm"
+                >
                   Pune, Maharashtra, India
-                </span>
+                </a>
               </li>
             </ul>
           </div>

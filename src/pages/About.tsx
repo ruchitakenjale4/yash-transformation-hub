@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Sparkles, Target, Eye, Heart, CheckCircle, ArrowRight, Award, GraduationCap, Users, Briefcase, Brain, Lightbulb, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import drYashPhoto from "@/assets/dr-yash.png";
 
 const values = [
   {
@@ -290,21 +291,12 @@ export default function About() {
 
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div className="aspect-[4/5] rounded-2xl bg-hero-gradient flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 rounded-full bg-gold/20 mx-auto mb-6 flex items-center justify-center">
-                      <span className="font-display text-5xl font-bold text-gold">DY</span>
-                    </div>
-                    <p className="font-display text-2xl font-semibold text-primary-foreground mb-2">
-                      Dr. Yash Kenjale
-                    </p>
-                    <p className="text-primary-foreground/70 mb-4">
-                      Founder & Lead Coach
-                    </p>
-                    <p className="text-primary-foreground/60 text-sm italic">
-                      "True success begins with self-mastery"
-                    </p>
-                  </div>
+                <div className="aspect-[4/5] rounded-2xl bg-hero-gradient overflow-hidden">
+                  <img 
+                    src={drYashPhoto} 
+                    alt="Dr. Yash Rajesh Kenjale - Founder of Y.A.S.H." 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div className="absolute -bottom-4 -left-4 px-6 py-4 bg-gold rounded-xl shadow-lg">
                   <p className="font-display text-xl font-bold text-foreground">1000+</p>
