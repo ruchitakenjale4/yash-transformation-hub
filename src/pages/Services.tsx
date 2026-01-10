@@ -31,7 +31,7 @@ const services = [
       "Break Free from Digital Loop",
       "Learn the Success Pattern",
       "Shift to Adaptable Mindset",
-      "O - Optimize strategies for sustainable growth",
+      "Optimize strategies for sustainable growth",
       "X - eXcel in all dimensions of life",
     ],
     formUrl: "https://forms.google.com/example-detox",
