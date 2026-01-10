@@ -32,7 +32,7 @@ const services = [
       "Learn the Success Pattern",
       "Shift to Adaptable Mindset",
       "Optimize strategies for sustainable growth",
-      "X - eXcel in all dimensions of life",
+      "Unleash Exponential Potentials",
     ],
     formUrl: "https://forms.google.com/example-detox",
     cta: "Register for D.E.T.O.X.",
