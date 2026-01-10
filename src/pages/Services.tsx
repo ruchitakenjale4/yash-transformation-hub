@@ -29,7 +29,7 @@ const services = [
     description: "Our flagship event is a structured transformation experience based on the D.E.T.O.X. framework. Disconnect from distractions, reconnect with your true self, and emerge with clarity, purpose, and renewed energy.",
     features: [
       "Break Free from Digital Loop",
-      "E - Embrace and work through emotional barriers",
+      "Learn the Success Pattern",
       "T - Transform mindset and break limiting patterns",
       "O - Optimize strategies for sustainable growth",
       "X - eXcel in all dimensions of life",
