@@ -285,6 +285,12 @@ export default function About() {
                     Lives Transformed
                   </p>
                 </div>
+                <div className="absolute -bottom-4 -right-4 px-6 py-4 bg-gold-gradient rounded-xl shadow-lg text-primary-foreground">
+                  <p className="font-display font-bold text-5xl">21k+</p>
+                  <p className="text-primary-foreground/90 text-lg font-semibold">
+                    YouTube Views
+                  </p>
+                </div>
               </div>
             </div>
           </div>
