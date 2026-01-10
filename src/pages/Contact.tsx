@@ -1,13 +1,27 @@
 import { useState } from "react";
-import { Sparkles, Mail, Phone, MapPin, Youtube, Instagram, Linkedin, Send, Quote } from "lucide-react";
+import {
+  Sparkles,
+  Mail,
+  Phone,
+  MapPin,
+  Youtube,
+  Instagram,
+  Linkedin,
+  Send,
+  Quote,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
+import shreyaImg from "@/assets/shreya.jpg";
+import rutujaImg from "@/assets/rutuja.jpg";
+import shardulImg from "@/assets/shardul.jpg";
 
 const WHATSAPP_NUMBER = "919923715905";
-const WHATSAPP_MESSAGE = "Hello Dr. Yash! I'm interested in learning more about Y.A.S.H. coaching services. Please share more details.";
+const WHATSAPP_MESSAGE =
+  "Hello Dr. Yash! I'm interested in learning more about Y.A.S.H. coaching services. Please share more details.";
 
 const contactInfo = [
   {
@@ -31,26 +45,47 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Youtube, href: "https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ", label: "YouTube", color: "hover:bg-red-500/10 hover:text-red-500" },
-  { icon: Instagram, href: "https://www.instagram.com/dr.yashkenjale/", label: "Instagram", color: "hover:bg-pink-500/10 hover:text-pink-500" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/dr-yash-kenjale-950499169/", label: "LinkedIn", color: "hover:bg-blue-500/10 hover:text-blue-500" },
+  {
+    icon: Youtube,
+    href: "https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ",
+    label: "YouTube",
+    color: "hover:bg-red-500/10 hover:text-red-500",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/dr.yashkenjale/",
+    label: "Instagram",
+    color: "hover:bg-pink-500/10 hover:text-pink-500",
+  },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/dr-yash-kenjale-950499169/",
+    label: "LinkedIn",
+    color: "hover:bg-blue-500/10 hover:text-blue-500",
+  },
 ];
 
 const testimonials = [
   {
     name: "Shardul Jadhav",
     role: "Indigo Airlines (Comm)",
-    content: "After completing BCS, I wasn't selected in any campus drive. I struggled to find a job. But after attending Reboot Yourself, my confidence skyrocketed. I manifested a job in communication, and soon got placed at Indigo Airlines as a telecom communicator. Dr. Yash's guidance inspired me so much that I've now started pursuing an MBA while working!",
+    image: shardulImg,
+    content:
+      "After completing BCS, I wasn't selected in any campus drive. I struggled to find a job. But after attending Reboot Yourself, my confidence skyrocketed. I manifested a job in communication, and soon got placed at Indigo Airlines as a telecom communicator. Dr. Yash's guidance inspired me so much that I've now started pursuing an MBA while working!",
   },
   {
     name: "Shreya Ghule",
     role: "CA Aspirant",
-    content: "After failing CA 2nd year twice and constantly battling acidity, headaches, and low self-esteem, I had almost given up. Reboot Yourself gave me mental clarity, emotional strength, and surprisingly, even my health started improving. I've now completed my CA academics and confidently intern at a CA firm. This workshop truly helped me find myself again.",
+    image: shreyaImg,
+    content:
+      "After failing CA 2nd year twice and constantly battling acidity, headaches, and low self-esteem, I had almost given up. Reboot Yourself gave me mental clarity, emotional strength, and surprisingly, even my health started improving. I've now completed my CA academics and confidently intern at a CA firm. This workshop truly helped me find myself again.",
   },
   {
     name: "Rutuja Nagmode",
     role: "Team Lead (Tata Tech)",
-    content: "After battling TB, failing 2nd year engineering, and facing rejection in my relationship, I felt completely defeated. Reboot Yourself changed my mindset, restored my confidence, and shifted everything. I completed engineering, got placed at Tata Technologies, became a team lead within a year, convinced my parents, got married, and now own a home in Pune.",
+    image: rutujaImg,
+    content:
+      "After battling TB, failing 2nd year engineering, and facing rejection in my relationship, I felt completely defeated. Reboot Yourself changed my mindset, restored my confidence, and shifted everything. I completed engineering, got placed at Tata Technologies, became a team lead within a year, convinced my parents, got married, and now own a home in Pune.",
   },
 ];
 
@@ -65,7 +100,9 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -81,7 +118,8 @@ export default function Contact() {
 
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+      description:
+        "Thank you for reaching out. We'll get back to you within 24 hours.",
     });
 
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -89,13 +127,17 @@ export default function Contact() {
   };
 
   const handleScheduleCall = () => {
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      WHATSAPP_MESSAGE
+    )}`;
     window.open(whatsappUrl, "_blank");
   };
 
   return (
     <Layout>
-      <title>Contact Y.A.S.H. | Get in Touch for Transformational Coaching</title>
+      <title>
+        Contact Y.A.S.H. | Get in Touch for Transformational Coaching
+      </title>
       <meta
         name="description"
         content="Contact Y.A.S.H. for holistic personal development, transformational coaching, and corporate training inquiries. Book a discovery call today."
@@ -114,8 +156,9 @@ export default function Contact() {
               <span className="text-gradient">Transformation Journey</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Ready to break through your limitations and unleash your infinite potential? 
-              Reach out to us and take the first step towards lasting change.
+              Ready to break through your limitations and unleash your infinite
+              potential? Reach out to us and take the first step towards lasting
+              change.
             </p>
           </div>
         </div>
@@ -133,7 +176,10 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Full Name *
                     </label>
                     <Input
@@ -147,7 +193,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Email Address *
                     </label>
                     <Input
@@ -165,7 +214,10 @@ export default function Contact() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Phone Number
                     </label>
                     <Input
@@ -179,7 +231,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Subject *
                     </label>
                     <Input
@@ -195,7 +250,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Your Message *
                   </label>
                   <Textarea
@@ -233,26 +291,39 @@ export default function Contact() {
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">
                 Contact Information
               </h2>
-              
+
               <div className="space-y-4 mb-8">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4 bg-muted rounded-xl">
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 p-4 bg-muted rounded-xl"
+                  >
                     <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
                       <info.icon className="w-5 h-5 text-gold" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">{info.label}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {info.label}
+                      </p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          target={info.label === "Location" ? "_blank" : undefined}
-                          rel={info.label === "Location" ? "noopener noreferrer" : undefined}
+                          target={
+                            info.label === "Location" ? "_blank" : undefined
+                          }
+                          rel={
+                            info.label === "Location"
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
                           className="text-foreground font-medium hover:text-gold transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-foreground font-medium">{info.value}</p>
+                        <p className="text-foreground font-medium">
+                          {info.value}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -284,14 +355,20 @@ export default function Contact() {
               <div className="p-6 bg-hero-gradient rounded-2xl text-primary-foreground">
                 <div className="flex items-center gap-3 mb-4">
                   <Youtube className="w-8 h-8 text-gold" />
-                  <h3 className="font-display text-lg font-semibold">Watch on YouTube</h3>
+                  <h3 className="font-display text-lg font-semibold">
+                    Watch on YouTube
+                  </h3>
                 </div>
                 <p className="text-primary-foreground/80 text-sm mb-4">
-                  Subscribe to our channel for free insights, transformation tips, and behind-the-scenes 
-                  content from our events.
+                  Subscribe to our channel for free insights, transformation
+                  tips, and behind-the-scenes content from our events.
                 </p>
                 <Button variant="hero" size="sm" asChild>
-                  <a href="https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Subscribe Now
                   </a>
                 </Button>
@@ -318,21 +395,25 @@ export default function Contact() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all"
+                className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all relative"
               >
-                <Quote className="w-10 h-10 text-gold/30 mb-4" />
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-full object-cover absolute top-6 right-6 border-4 border-gold"
+                />
+                <Quote className="w-10 h-10 text-gold/30 mb-4 mt-12" />
                 <p className="text-foreground mb-6 leading-relaxed text-sm">
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-hero-gradient flex items-center justify-center">
-                    <span className="font-display text-lg font-bold text-primary-foreground">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground uppercase text-sm">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground uppercase text-sm">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -349,8 +430,9 @@ export default function Contact() {
               Book a Free Discovery Call
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Not sure which service is right for you? Let's talk. Schedule a complimentary 
-              20-minute call to discuss your goals and explore how we can help.
+              Not sure which service is right for you? Let's talk. Schedule a
+              complimentary 20-minute call to discuss your goals and explore how
+              we can help.
             </p>
             <Button variant="gold" size="lg" onClick={handleScheduleCall}>
               Schedule Your Call

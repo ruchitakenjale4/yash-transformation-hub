@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Users, Brain, Heart, Target, CheckCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Users,
+  Brain,
+  Heart,
+  Target,
+  CheckCircle,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
   { number: "1000+", label: "Lives Transformed" },
+  { number: "21K+", label: "Views" },
+  { number: "20+", label: "Events Organised" },
   { number: "10+", label: "Years Experience" },
 ];
 
@@ -13,38 +23,64 @@ const features = [
   {
     icon: Brain,
     title: "Mindset Mastery",
-    description: "Shift from limiting beliefs to a growth-oriented, success-driven perspective.",
+    description:
+      "Shift from limiting beliefs to a growth-oriented, success-driven perspective.",
   },
   {
     icon: Heart,
     title: "Emotional Intelligence",
-    description: "Master your emotions and navigate life's challenges with confidence.",
+    description:
+      "Master your emotions and navigate life's challenges with confidence.",
   },
   {
     icon: Target,
     title: "Career Clarity",
-    description: "Gain actionable strategies for professional growth and business success.",
+    description:
+      "Gain actionable strategies for professional growth and business success.",
   },
   {
     icon: Users,
     title: "Leadership Excellence",
-    description: "Enhance team performance and develop transformational leadership skills.",
+    description:
+      "Enhance team performance and develop transformational leadership skills.",
   },
 ];
 
 const detoxFramework = [
-  { letter: "D", word: "Discover", description: "Uncover your true potential and hidden strengths" },
-  { letter: "E", word: "Embrace", description: "Accept and work through emotional barriers" },
-  { letter: "T", word: "Transform", description: "Shift mindset and break limiting patterns" },
-  { letter: "O", word: "Optimize", description: "Fine-tune strategies for sustainable growth" },
-  { letter: "X", word: "eXcel", description: "Achieve excellence in all life dimensions" },
+  {
+    letter: "D",
+    word: "Discover",
+    description: "Uncover your true potential and hidden strengths",
+  },
+  {
+    letter: "E",
+    word: "Embrace",
+    description: "Accept and work through emotional barriers",
+  },
+  {
+    letter: "T",
+    word: "Transform",
+    description: "Shift mindset and break limiting patterns",
+  },
+  {
+    letter: "O",
+    word: "Optimize",
+    description: "Fine-tune strategies for sustainable growth",
+  },
+  {
+    letter: "X",
+    word: "eXcel",
+    description: "Achieve excellence in all life dimensions",
+  },
 ];
 
 export default function Home() {
   return (
     <Layout>
       {/* SEO Meta */}
-      <title>Y.A.S.H. - Holistic Personal Development | Unleash the Infinity</title>
+      <title>
+        Y.A.S.H. - Holistic Personal Development | Unleash the Infinity
+      </title>
       <meta
         name="description"
         content="Yugandhar Academic Services for Harmony - Transform your life with holistic coaching, emotional mastery, and leadership development. Unleash your infinite potential."
@@ -57,19 +93,19 @@ export default function Home() {
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-primary/60" />
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <p className="text-gold font-medium mb-4 animate-fade-up opacity-0 stagger-1">
               Yugandhar Academic Services for Harmony
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-up opacity-0 stagger-2">
-              Unleash the{" "}
-              <span className="text-gradient">Infinity</span>
+              Unleash the <span className="text-gradient">Infinity</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto animate-fade-up opacity-0 stagger-3">
-              Break through limitations, achieve self-mastery, and unlock your highest potential 
-              through holistic personal development and transformational coaching.
+              Break through limitations, achieve self-mastery, and unlock your
+              highest potential through holistic personal development and
+              transformational coaching.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0 stagger-4">
               <Button variant="hero" size="xl" asChild>
@@ -95,7 +131,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center gap-16 md:gap-24">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
@@ -120,10 +156,11 @@ export default function Home() {
               True Transformation is Not a Luxury—It's Essential
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              At Y.A.S.H., we believe in breaking patterns of stress, self-doubt, and stagnation. 
-              We empower individuals to take charge of their lives through holistic well-being, 
-              strategic growth, and self-mastery. Our approach goes beyond motivation—we create 
-              deep, lasting transformation.
+              At Y.A.S.H., we believe in breaking patterns of stress,
+              self-doubt, and stagnation. We empower individuals to take charge
+              of their lives through holistic well-being, strategic growth, and
+              self-mastery. Our approach goes beyond motivation—we create deep,
+              lasting transformation.
             </p>
           </div>
 
@@ -139,7 +176,9 @@ export default function Home() {
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -158,8 +197,9 @@ export default function Home() {
               Digital D.E.T.O.X.
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-              A structured transformation experience designed to help you disconnect from distractions 
-              and reconnect with your true potential.
+              A structured transformation experience designed to help you
+              disconnect from distractions and reconnect with your true
+              potential.
             </p>
           </div>
 
@@ -205,10 +245,11 @@ export default function Home() {
                 We Don't Believe in One-Size-Fits-All Solutions
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Transformation is personal, and so is our approach. We combine modern psychology, 
-                coaching, and leadership training to create lasting impact tailored to your journey.
+                Transformation is personal, and so is our approach. We combine
+                modern psychology, coaching, and leadership training to create
+                lasting impact tailored to your journey.
               </p>
-              
+
               <ul className="space-y-4">
                 {[
                   "Science-Backed & Holistic Approach",
@@ -233,7 +274,9 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-hero-gradient p-8 flex items-center justify-center">
                 <div className="text-center">
-                  <p className="font-display text-6xl md:text-8xl font-bold text-gold mb-4">∞</p>
+                  <p className="font-display text-6xl md:text-8xl font-bold text-gold mb-4">
+                    ∞
+                  </p>
                   <p className="font-display text-2xl text-primary-foreground font-semibold">
                     Your Potential is Limitless
                   </p>
@@ -255,8 +298,9 @@ export default function Home() {
               Ready to Unleash Your Infinity?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Take the first step towards transforming your life. Book a discovery call today 
-              and explore how Y.A.S.H. can help you achieve your highest potential.
+              Take the first step towards transforming your life. Book a
+              discovery call today and explore how Y.A.S.H. can help you achieve
+              your highest potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gold" size="lg" asChild>
