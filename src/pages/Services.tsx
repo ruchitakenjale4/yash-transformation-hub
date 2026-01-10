@@ -28,7 +28,7 @@ const services = [
     subtitle: "Signature Transformation Event",
     description: "Our flagship event is a structured transformation experience based on the D.E.T.O.X. framework. Disconnect from distractions, reconnect with your true self, and emerge with clarity, purpose, and renewed energy.",
     features: [
-      "D - Discover your true potential and hidden strengths",
+      "Break Free from Digital Loop",
       "E - Embrace and work through emotional barriers",
       "T - Transform mindset and break limiting patterns",
       "O - Optimize strategies for sustainable growth",
