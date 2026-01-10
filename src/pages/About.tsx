@@ -1,159 +1,85 @@
 import { Link } from "react-router-dom";
-import {
-  Sparkles,
-  Target,
-  Eye,
-  Heart,
-  CheckCircle,
-  ArrowRight,
-  Award,
-  GraduationCap,
-  Users,
-  Briefcase,
-  Brain,
-  Lightbulb,
-  Rocket,
-} from "lucide-react";
+import { Sparkles, Target, Eye, Heart, CheckCircle, ArrowRight, Award, GraduationCap, Users, Briefcase, Brain, Lightbulb, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import drYashPhoto from "@/assets/dr-yash.png";
-
-const values = [
-  {
-    icon: Brain,
-    title: "Science-Backed & Holistic",
-    description:
-      "Combining modern psychology, coaching, and leadership training for comprehensive transformation.",
-  },
-  {
-    icon: Heart,
-    title: "Deep, Lasting Impact",
-    description:
-      "We go beyond surface-level motivation and focus on true breakthroughs that stick.",
-  },
-  {
-    icon: Target,
-    title: "Customized for You",
-    description:
-      "Every session, workshop, and coaching experience is tailored to individual needs.",
-  },
-  {
-    icon: Users,
-    title: "A Community for Growth",
-    description:
-      "Y.A.S.H. is more than a service—it's a movement towards self-mastery and excellence.",
-  },
-];
-
-const expertise = [
-  {
-    icon: Heart,
-    title: "Psychological Counseling & Emotional Mastery",
-    description: "Overcoming self-doubt, stress, and limiting beliefs",
-  },
-  {
-    icon: Brain,
-    title: "Mindset & Personal Growth Coaching",
-    description:
-      "Shifting from a fixed mindset to a growth-oriented, success-driven perspective",
-  },
-  {
-    icon: Users,
-    title: "Leadership & Corporate Training",
-    description:
-      "Enhancing team performance, emotional intelligence, and leadership effectiveness",
-  },
-  {
-    icon: Briefcase,
-    title: "Career & Business Coaching",
-    description:
-      "Providing clarity, confidence, and actionable strategies for professional growth",
-  },
-  {
-    icon: Lightbulb,
-    title: "Holistic Well-being",
-    description:
-      "Integrating modern psychology with self-care strategies for a balanced, fulfilled life",
-  },
-];
-
-const credentials = [
-  "BAMS (Bachelor of Ayurvedic Medicine and Surgery)",
-  "Postgraduate Diploma in Psychological Counseling",
-  "Certified Life Coach",
-  "NLP Practitioner",
-  "Certified Career Coach",
-  "Certified Business Coach",
-  "Diploma in Modern Applied Psychology",
-];
-
-const whoWeServe = [
-  {
-    icon: Briefcase,
-    title: "Corporate Professionals & Leaders",
-    description:
-      "Strengthening leadership skills, emotional intelligence, and workplace efficiency",
-  },
-  {
-    icon: GraduationCap,
-    title: "Students & Young Adults",
-    description: "Developing confidence, self-awareness, and career clarity",
-  },
-  {
-    icon: Rocket,
-    title: "Entrepreneurs & Business Owners",
-    description:
-      "Cultivating vision, decision-making skills, and sustainable growth strategies",
-  },
-  {
-    icon: Heart,
-    title: "Individuals Committed to Self-Improvement",
-    description:
-      "Breaking negative patterns, overcoming fears, and stepping into personal power",
-  },
-];
-
-const drYashMission = [
-  "Empower individuals to take charge of their mental, emotional, and professional well-being",
-  "Break limiting beliefs and develop a growth-oriented mindset",
-  "Combine psychology, coaching, and leadership training to drive real change",
-  "Help people master their emotions, careers, and personal lives through practical, actionable strategies",
-];
-
-const whyDrYash = [
-  {
-    title: "1,000+ Lives Transformed",
-    description:
-      "Guided individuals from self-doubt to clarity, confidence, and success",
-  },
-  {
-    title: "Scientific & Holistic Approach",
-    description:
-      "Blends modern psychology, coaching, and strategic development",
-  },
-  {
-    title: "Personalized Growth Plans",
-    description:
-      "Every session and program is tailored to the individual's journey",
-  },
-  {
-    title: "Results-Oriented & Impact-Driven",
-    description:
-      "Focuses on real breakthroughs, not just surface-level motivation",
-  },
-];
-
+const values = [{
+  icon: Brain,
+  title: "Science-Backed & Holistic",
+  description: "Combining modern psychology, coaching, and leadership training for comprehensive transformation."
+}, {
+  icon: Heart,
+  title: "Deep, Lasting Impact",
+  description: "We go beyond surface-level motivation and focus on true breakthroughs that stick."
+}, {
+  icon: Target,
+  title: "Customized for You",
+  description: "Every session, workshop, and coaching experience is tailored to individual needs."
+}, {
+  icon: Users,
+  title: "A Community for Growth",
+  description: "Y.A.S.H. is more than a service—it's a movement towards self-mastery and excellence."
+}];
+const expertise = [{
+  icon: Heart,
+  title: "Psychological Counseling & Emotional Mastery",
+  description: "Overcoming self-doubt, stress, and limiting beliefs"
+}, {
+  icon: Brain,
+  title: "Mindset & Personal Growth Coaching",
+  description: "Shifting from a fixed mindset to a growth-oriented, success-driven perspective"
+}, {
+  icon: Users,
+  title: "Leadership & Corporate Training",
+  description: "Enhancing team performance, emotional intelligence, and leadership effectiveness"
+}, {
+  icon: Briefcase,
+  title: "Career & Business Coaching",
+  description: "Providing clarity, confidence, and actionable strategies for professional growth"
+}, {
+  icon: Lightbulb,
+  title: "Holistic Well-being",
+  description: "Integrating modern psychology with self-care strategies for a balanced, fulfilled life"
+}];
+const credentials = ["BAMS (Bachelor of Ayurvedic Medicine and Surgery)", "Postgraduate Diploma in Psychological Counseling", "Certified Life Coach", "NLP Practitioner", "Certified Career Coach", "Certified Business Coach", "Diploma in Modern Applied Psychology"];
+const whoWeServe = [{
+  icon: Briefcase,
+  title: "Corporate Professionals & Leaders",
+  description: "Strengthening leadership skills, emotional intelligence, and workplace efficiency"
+}, {
+  icon: GraduationCap,
+  title: "Students & Young Adults",
+  description: "Developing confidence, self-awareness, and career clarity"
+}, {
+  icon: Rocket,
+  title: "Entrepreneurs & Business Owners",
+  description: "Cultivating vision, decision-making skills, and sustainable growth strategies"
+}, {
+  icon: Heart,
+  title: "Individuals Committed to Self-Improvement",
+  description: "Breaking negative patterns, overcoming fears, and stepping into personal power"
+}];
+const drYashMission = ["Empower individuals to take charge of their mental, emotional, and professional well-being", "Break limiting beliefs and develop a growth-oriented mindset", "Combine psychology, coaching, and leadership training to drive real change", "Help people master their emotions, careers, and personal lives through practical, actionable strategies"];
+const whyDrYash = [{
+  title: "1,000+ Lives Transformed",
+  description: "Guided individuals from self-doubt to clarity, confidence, and success"
+}, {
+  title: "Scientific & Holistic Approach",
+  description: "Blends modern psychology, coaching, and strategic development"
+}, {
+  title: "Personalized Growth Plans",
+  description: "Every session and program is tailored to the individual's journey"
+}, {
+  title: "Results-Oriented & Impact-Driven",
+  description: "Focuses on real breakthroughs, not just surface-level motivation"
+}];
 export default function About() {
-  return (
-    <Layout>
+  return <Layout>
       <title>
         About Y.A.S.H. | Holistic Personal Development & Transformational
         Coaching
       </title>
-      <meta
-        name="description"
-        content="Learn about Y.A.S.H. and Dr. Yash Rajesh Kenjale's mission to help individuals achieve holistic well-being through transformational coaching and personal development."
-      />
+      <meta name="description" content="Learn about Y.A.S.H. and Dr. Yash Rajesh Kenjale's mission to help individuals achieve holistic well-being through transformational coaching and personal development." />
 
       {/* Hero Section */}
       <section className="pt-12 pb-20 bg-section-gradient">
@@ -243,11 +169,7 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {expertise.map((item, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all"
-              >
+            {expertise.map((item, index) => <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all">
                 <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-gold" />
                 </div>
@@ -257,8 +179,7 @@ export default function About() {
                 <p className="text-muted-foreground text-sm">
                   {item.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -281,11 +202,7 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="p-6 bg-card rounded-xl border border-border hover:shadow-lg hover:border-gold/30 transition-all text-center"
-              >
+            {values.map((value, index) => <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg hover:border-gold/30 transition-all text-center">
                 <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-7 h-7 text-gold" />
                 </div>
@@ -295,8 +212,7 @@ export default function About() {
                 <p className="text-muted-foreground text-sm">
                   {value.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="mt-16 text-center">
@@ -349,29 +265,23 @@ export default function About() {
                 Credentials & Expertise:
               </h4>
               <ul className="grid grid-cols-1 gap-2 mb-6">
-                {credentials.map((credential, index) => (
-                  <li key={index} className="flex items-start gap-2">
+                {credentials.map((credential, index) => <li key={index} className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-gold shrink-0 mt-1" />
                     <span className="text-muted-foreground text-sm">
                       {credential}
                     </span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
             <div className="order-1 lg:order-2">
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl bg-hero-gradient overflow-hidden">
-                  <img
-                    src={drYashPhoto}
-                    alt="Dr. Yash Rajesh Kenjale - Founder of Y.A.S.H."
-                    className="w-full h-full object-cover object-top"
-                  />
+                  <img src={drYashPhoto} alt="Dr. Yash Rajesh Kenjale - Founder of Y.A.S.H." className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 px-6 py-4 bg-hero-gradient rounded-xl shadow-lg text-primary-foreground">
-                  <p className="font-display text-xl font-bold">1000+</p>
-                  <p className="text-primary-foreground/90 text-sm">
+                  <p className="font-display font-bold text-5xl">1000+</p>
+                  <p className="text-primary-foreground/90 text-lg font-semibold">
                     Lives Transformed
                   </p>
                 </div>
@@ -427,8 +337,7 @@ export default function About() {
                   His Mission & Approach
                 </h3>
                 <ul className="space-y-3">
-                  {drYashMission.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {drYashMission.map((item, index) => <li key={index} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-gold text-xs font-bold">
                           {index + 1}
@@ -437,8 +346,7 @@ export default function About() {
                       <span className="text-muted-foreground text-sm">
                         {item}
                       </span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
@@ -447,16 +355,14 @@ export default function About() {
                   Why Work with Dr. Yash?
                 </h3>
                 <ul className="space-y-4">
-                  {whyDrYash.map((item, index) => (
-                    <li key={index}>
+                  {whyDrYash.map((item, index) => <li key={index}>
                       <p className="font-semibold text-gold text-sm">
                         {item.title}
                       </p>
                       <p className="text-primary-foreground/80 text-sm">
                         {item.description}
                       </p>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
             </div>
@@ -488,11 +394,7 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {whoWeServe.map((item, index) => (
-              <div
-                key={index}
-                className="flex gap-4 p-6 bg-card rounded-xl border border-border hover:shadow-lg hover:border-gold/30 transition-all"
-              >
+            {whoWeServe.map((item, index) => <div key={index} className="flex gap-4 p-6 bg-card rounded-xl border border-border hover:shadow-lg hover:border-gold/30 transition-all">
                 <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-7 h-7 text-gold" />
                 </div>
@@ -502,8 +404,7 @@ export default function About() {
                   </h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -533,6 +434,5 @@ export default function About() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
