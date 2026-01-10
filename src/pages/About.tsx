@@ -296,11 +296,11 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+              <span className="inline-flex items-center gap-2 text-gold mb-4 font-bold text-2xl">
                 <Sparkles size={18} />
                 His Journey
               </span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="font-display text-3xl font-bold text-foreground mb-6 md:text-3xl">
                 From Shy Dreamer to Empowering Leader
               </h2>
             </div>
