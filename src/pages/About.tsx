@@ -279,17 +279,20 @@ export default function About() {
                 <div className="aspect-[4/5] rounded-2xl bg-hero-gradient overflow-hidden">
                   <img src={drYashPhoto} alt="Dr. Yash Rajesh Kenjale - Founder of Y.A.S.H." className="w-full h-full object-cover object-top" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 px-6 py-4 bg-hero-gradient rounded-xl shadow-lg text-primary-foreground">
-                  <p className="font-display font-bold text-5xl">1000+</p>
-                  <p className="text-primary-foreground/90 text-lg font-semibold">
-                    Lives Transformed
-                  </p>
-                </div>
-                <div className="absolute -bottom-4 -right-4 px-6 py-4 bg-hero-gradient rounded-xl shadow-lg text-primary-foreground">
-                  <p className="font-display font-bold text-5xl">21k+</p>
-                  <p className="text-primary-foreground/90 text-lg font-semibold">
-                    YouTube Views
-                  </p>
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-8 py-4 bg-hero-gradient rounded-xl shadow-lg text-primary-foreground flex items-center gap-6">
+                  <div className="text-center">
+                    <p className="font-display font-bold text-4xl">1000+</p>
+                    <p className="text-primary-foreground/90 text-sm font-semibold">
+                      Lives Transformed
+                    </p>
+                  </div>
+                  <div className="w-px h-12 bg-primary-foreground/30"></div>
+                  <div className="text-center">
+                    <p className="font-display font-bold text-4xl">21k+</p>
+                    <p className="text-primary-foreground/90 text-sm font-semibold">
+                      YouTube Views
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
