@@ -30,7 +30,7 @@ const services = [
     features: [
       "Break Free from Digital Loop",
       "Learn the Success Pattern",
-      "T - Transform mindset and break limiting patterns",
+      "Shift to Adaptable Mindset",
       "O - Optimize strategies for sustainable growth",
       "X - eXcel in all dimensions of life",
     ],
