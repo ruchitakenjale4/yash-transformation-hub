@@ -168,9 +168,10 @@ export default function Services() {
                     {/* Google Form Embed */}
                     {service.id === "one-to-one" ? (
                       <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfT9J6XMYTjuYTqqyF9/viewform?embedded=true"
-                        className="w-full aspect-[4/3] rounded-xl border-0"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSepZ5CmqAxwVlrC95mVGeV8xENUAyI_IROK5Lf8DaFBZMjCUQ/viewform?embedded=true"
+                        className="w-full min-h-[600px] rounded-xl border-0"
                         title={`${service.title} Inquiry Form`}
+                        loading="lazy"
                       >
                         Loading…
                       </iframe>
