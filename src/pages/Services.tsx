@@ -18,7 +18,8 @@ const services = [
       "Work-Life Balance & Personal Fulfillment",
       "Relationship Dynamics & Communication Skills",
     ],
-    formUrl: "https://forms.google.com/example-one-to-one",
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfT9J6XMYTjuYTqqyF9/viewform?embedded=true",
+    embedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfT9J6XMYTjuYTqqyF9/viewform?embedded=true",
     cta: "Book Your Session",
   },
   {
@@ -164,20 +165,30 @@ export default function Services() {
                       personalized recommendations.
                     </p>
                     
-                    {/* Google Form Embed Placeholder */}
-                    <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-border">
-                      <div className="text-center p-6">
-                        <Calendar className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
-                        <p className="text-muted-foreground text-sm mb-4">
-                          Google Form will be embedded here
-                        </p>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href={service.formUrl} target="_blank" rel="noopener noreferrer">
-                            Open Form in New Tab
-                          </a>
-                        </Button>
+                    {/* Google Form Embed */}
+                    {service.id === "one-to-one" ? (
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfT9J6XMYTjuYTqqyF9/viewform?embedded=true"
+                        className="w-full aspect-[4/3] rounded-xl border-0"
+                        title={`${service.title} Inquiry Form`}
+                      >
+                        Loading…
+                      </iframe>
+                    ) : (
+                      <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-border">
+                        <div className="text-center p-6">
+                          <Calendar className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
+                          <p className="text-muted-foreground text-sm mb-4">
+                            Google Form will be embedded here
+                          </p>
+                          <Button variant="outline" size="sm" asChild>
+                            <a href={service.formUrl} target="_blank" rel="noopener noreferrer">
+                              Open Form in New Tab
+                            </a>
+                          </Button>
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     <p className="text-muted-foreground text-xs mt-4 text-center">
                       Your information is kept confidential and secure.
