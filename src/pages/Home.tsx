@@ -87,27 +87,28 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-right"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-primary/60" />
+        {/* Left-to-right gradient overlay: opaque on left, transparent on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="max-w-2xl">
             <p className="text-gold font-medium mb-4 animate-fade-up opacity-0 stagger-1">
               Yugandhar Academic Services for Harmony
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-up opacity-0 stagger-2">
               Unleash the <span className="text-gradient">Infinity</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto animate-fade-up opacity-0 stagger-3">
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl animate-fade-up opacity-0 stagger-3">
               Break through limitations, achieve self-mastery, and unlock your
               highest potential through holistic personal development and
               transformational coaching.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0 stagger-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 stagger-4">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/services">
                   Explore Services <ArrowRight className="ml-2" />
