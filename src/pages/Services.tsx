@@ -175,6 +175,15 @@ export default function Services() {
                       >
                         Loading…
                       </iframe>
+                    ) : service.id === "detox" ? (
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfq9PzH-gr4NcH_aGPvjaj3k2GD37H9sp-QMMgcq62yF8_Fng/viewform?embedded=true"
+                        className="w-full min-h-[600px] rounded-xl border-0"
+                        title={`${service.title} Inquiry Form`}
+                        loading="lazy"
+                      >
+                        Loading…
+                      </iframe>
                     ) : (
                       <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-border">
                         <div className="text-center p-6">
