@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { GoogleReviews } from "@/components/home/GoogleReviews";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
@@ -290,6 +291,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews Section */}
+      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="py-20 bg-background">
