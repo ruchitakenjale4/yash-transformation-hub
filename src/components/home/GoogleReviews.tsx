@@ -1,5 +1,13 @@
 import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const reviews = [
   {
@@ -18,6 +26,18 @@ const reviews = [
     name: "Sneha Patil",
     rating: 5,
     text: "Incredible experience! The holistic approach combining psychology and practical strategies made a real difference in both my personal and professional life.",
+    date: "1 month ago",
+  },
+  {
+    name: "Amit Deshmukh",
+    rating: 5,
+    text: "The leadership training transformed how I manage my team. Dr. Yash's insights on emotional intelligence have made me a better leader and communicator.",
+    date: "2 weeks ago",
+  },
+  {
+    name: "Kavita Joshi",
+    rating: 5,
+    text: "I was skeptical at first, but the results speak for themselves. My productivity and mental clarity have improved significantly after the coaching sessions.",
     date: "1 month ago",
   },
 ];
@@ -48,38 +68,57 @@ export function GoogleReviews() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <p className="text-foreground mb-4 text-sm leading-relaxed">
-                "{review.text}"
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-foreground text-sm">
-                    {review.name}
-                  </p>
-                  <p className="text-muted-foreground text-xs">{review.date}</p>
-                </div>
-                <img
-                  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google"
-                  className="h-4 object-contain opacity-60"
-                />
-              </div>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto px-12 mb-10">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {reviews.map((review, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                  <div className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow h-full">
+                    <div className="flex items-center gap-1 mb-3">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
+                    <p className="text-foreground mb-4 text-sm leading-relaxed">
+                      "{review.text}"
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-semibold text-foreground text-sm">
+                          {review.name}
+                        </p>
+                        <p className="text-muted-foreground text-xs">
+                          {review.date}
+                        </p>
+                      </div>
+                      <img
+                        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                        alt="Google"
+                        className="h-4 object-contain opacity-60"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         <div className="text-center">
@@ -89,7 +128,7 @@ export function GoogleReviews() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              See All Reviews on Google <ExternalLink className="ml-2 w-4 h-4" />
+              Read More Reviews <ExternalLink className="ml-2 w-4 h-4" />
             </a>
           </Button>
         </div>

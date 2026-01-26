@@ -146,6 +146,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Google Reviews Section */}
+      <GoogleReviews />
+
       {/* About Introduction */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -291,9 +294,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Google Reviews Section */}
-      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="py-20 bg-background">
