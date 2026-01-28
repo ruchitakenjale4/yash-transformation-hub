@@ -47,7 +47,13 @@ const features = [
   },
 ];
 
-const detoxLetters = ["D", "E", "T", "O", "X"];
+const detoxBenefits = [
+  "Break Free from the Digital Loop",
+  "Learn the Success Pattern",
+  "Shift to an Adaptable Mindset",
+  "Optimize Strategies for Sustainable Growth",
+  "Unleash Exponential Potential",
+];
 
 export default function Home() {
   return (
@@ -182,22 +188,19 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-center gap-3 md:gap-6 mb-12">
-            {detoxLetters.map((letter, index) => (
-              <div
-                key={index}
-                className="w-14 h-14 md:w-20 md:h-20 rounded-xl bg-primary-foreground/10 border border-gold/30 flex items-center justify-center hover:bg-gold/20 hover:border-gold transition-all duration-300"
-              >
-                <span className="font-display text-2xl md:text-4xl font-bold text-gold">
-                  {letter}
-                </span>
-              </div>
-            ))}
+          <div className="max-w-xl mx-auto mb-12">
+            <ul className="space-y-4">
+              {detoxBenefits.map((benefit, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-3 text-primary-foreground/90"
+                >
+                  <CheckCircle className="w-5 h-5 text-gold shrink-0" />
+                  <span className="text-lg">{benefit}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <p className="text-center text-primary-foreground/70 text-sm mb-8">
-            Discover the full framework at our live event
-          </p>
 
           <div className="text-center">
             <Button variant="hero" size="lg" asChild>
