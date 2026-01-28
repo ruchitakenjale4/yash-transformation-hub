@@ -50,28 +50,28 @@ const features = [
 const detoxFramework = [
   {
     letter: "D",
-    word: "Discover",
-    description: "Uncover your true potential and hidden strengths",
+    word: "Dopamine Hacking",
+    description: "Rewire how your brain seeks reward, so cravings stop running your behaviour",
   },
   {
     letter: "E",
-    word: "Embrace",
-    description: "Accept and work through emotional barriers",
+    word: "Environment Change",
+    description: "Shape your surroundings—digital and physical—to support focus over distraction",
   },
   {
     letter: "T",
-    word: "Transform",
-    description: "Shift mindset and break limiting patterns",
+    word: "Target Setting",
+    description: "Bring clarity to what you're working toward, so effort feels meaningful",
   },
   {
     letter: "O",
-    word: "Optimize",
-    description: "Fine-tune strategies for sustainable growth",
+    word: "Optimising Your Mind",
+    description: "Work with belief systems and emotional patterns that decide if change feels safe",
   },
   {
     letter: "X",
-    word: "eXcel",
-    description: "Achieve excellence in all life dimensions",
+    word: "Xtreme Life",
+    description: "Next level steps for next level living—unleash exponential potential",
   },
 ];
 
