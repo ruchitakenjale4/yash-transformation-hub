@@ -47,33 +47,7 @@ const features = [
   },
 ];
 
-const detoxFramework = [
-  {
-    letter: "D",
-    word: "Dopamine Hacking",
-    description: "Rewire how your brain seeks reward, so cravings stop running your behaviour",
-  },
-  {
-    letter: "E",
-    word: "Environment Change",
-    description: "Shape your surroundings—digital and physical—to support focus over distraction",
-  },
-  {
-    letter: "T",
-    word: "Target Setting",
-    description: "Bring clarity to what you're working toward, so effort feels meaningful",
-  },
-  {
-    letter: "O",
-    word: "Optimising Your Mind",
-    description: "Work with belief systems and emotional patterns that decide if change feels safe",
-  },
-  {
-    letter: "X",
-    word: "Xtreme Life",
-    description: "Next level steps for next level living—unleash exponential potential",
-  },
-];
+const detoxLetters = ["D", "E", "T", "O", "X"];
 
 export default function Home() {
   return (
@@ -193,7 +167,7 @@ export default function Home() {
       {/* D.E.T.O.X. Framework Section */}
       <section className="py-20 bg-hero-gradient text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
               <Sparkles size={18} />
               Signature Event
@@ -201,31 +175,29 @@ export default function Home() {
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
               Digital D.E.T.O.X.
             </h2>
-            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-              A structured transformation experience designed to help you
-              disconnect from distractions and reconnect with your true
-              potential.
+            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
+              A structured transformation experience built on 5 powerful pillars 
+              designed to help you break free from digital distractions and 
+              reconnect with your true potential.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-4 mb-12">
-            {detoxFramework.map((item, index) => (
+          <div className="flex justify-center gap-3 md:gap-6 mb-12">
+            {detoxLetters.map((letter, index) => (
               <div
                 key={index}
-                className="relative p-6 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all group"
+                className="w-14 h-14 md:w-20 md:h-20 rounded-xl bg-primary-foreground/10 border border-gold/30 flex items-center justify-center hover:bg-gold/20 hover:border-gold transition-all duration-300"
               >
-                <span className="font-display text-5xl font-bold text-gold opacity-20 absolute top-2 right-4 group-hover:opacity-40 transition-opacity">
-                  {item.letter}
+                <span className="font-display text-2xl md:text-4xl font-bold text-gold">
+                  {letter}
                 </span>
-                <h3 className="font-display text-lg font-semibold mb-2 relative z-10">
-                  {item.word}
-                </h3>
-                <p className="text-primary-foreground/70 text-sm relative z-10">
-                  {item.description}
-                </p>
               </div>
             ))}
           </div>
+
+          <p className="text-center text-primary-foreground/70 text-sm mb-8">
+            Discover the full framework at our live event
+          </p>
 
           <div className="text-center">
             <Button variant="hero" size="lg" asChild>
