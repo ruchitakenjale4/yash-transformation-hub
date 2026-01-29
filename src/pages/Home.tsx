@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { GoogleReviews } from "@/components/home/GoogleReviews";
+import { SuccessStories } from "@/components/home/SuccessStories";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
@@ -128,6 +129,9 @@ export default function Home() {
 
       {/* Google Reviews Section */}
       <GoogleReviews />
+
+      {/* Success Stories Section */}
+      <SuccessStories />
 
       {/* About Introduction */}
       <section className="py-20 bg-background">
