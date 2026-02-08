@@ -185,19 +185,14 @@ export default function Services() {
                         Loading…
                       </iframe>
                     ) : (
-                      <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-border">
-                        <div className="text-center p-6">
-                          <Calendar className="w-12 h-12 text-muted-foreground/50 mx-auto mb-4" />
-                          <p className="text-muted-foreground text-sm mb-4">
-                            Google Form will be embedded here
-                          </p>
-                          <Button variant="outline" size="sm" asChild>
-                            <a href={service.formUrl} target="_blank" rel="noopener noreferrer">
-                              Open Form in New Tab
-                            </a>
-                          </Button>
-                        </div>
-                      </div>
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScdlRVQu5Td544UASpgbx2GkcCW_aDHfzGrojo3uZzTCKDPGw/viewform?embedded=true"
+                        className="w-full min-h-[600px] rounded-xl border-0"
+                        title={`${service.title} Inquiry Form`}
+                        loading="lazy"
+                      >
+                        Loading…
+                      </iframe>
                     )}
 
                     <p className="text-muted-foreground text-xs mt-4 text-center">
