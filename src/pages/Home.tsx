@@ -127,6 +127,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Success Stories Section */}
+      <SuccessStories />
+
       {/* About Introduction */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -170,9 +173,6 @@ export default function Home() {
 
       {/* Google Reviews Section */}
       <GoogleReviews />
-
-      {/* Success Stories Section */}
-      <SuccessStories />
 
       {/* D.E.T.O.X. Framework Section */}
       <section className="py-20 bg-hero-gradient text-primary-foreground">
