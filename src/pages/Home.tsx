@@ -137,17 +137,17 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutBg})` }}
         />
-        <div className="absolute inset-0 bg-background/60" />
+        <div className="absolute inset-0 bg-primary/75" />
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
               <Sparkles size={18} />
               About Y.A.S.H.
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
               True Transformation is Not a Luxury—It's Essential
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-primary-foreground/80 text-lg leading-relaxed">
               At Y.A.S.H., we believe in breaking patterns of stress,
               self-doubt, and stagnation. We empower individuals to take charge
               of their lives through holistic well-being, strategic growth, and
@@ -160,15 +160,15 @@ export default function Home() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group p-6 bg-card rounded-xl border border-border hover:border-gold/50 hover:shadow-lg transition-all duration-300"
+                className="group p-6 bg-primary/40 backdrop-blur-sm rounded-xl border border-primary-foreground/20 hover:border-gold/50 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
                   <feature.icon className="w-6 h-6 text-gold" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                <h3 className="font-display text-lg font-semibold text-primary-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-primary-foreground/70 text-sm">
                   {feature.description}
                 </p>
               </div>
