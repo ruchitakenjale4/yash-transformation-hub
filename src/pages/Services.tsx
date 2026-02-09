@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Sparkles, User, Calendar, Building2, CheckCircle, ArrowRight, Brain, Heart, Target, Users } from "lucide-react";
-import corporateTrainingCover from "@/assets/corporate-training-cover.png";
+
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 
@@ -123,16 +123,6 @@ export default function Services() {
                 id={service.id}
                 className="space-y-8"
               >
-                {/* Cover image for Corporate Training */}
-                {service.id === "corporate" && (
-                  <div className="w-full overflow-hidden rounded-2xl shadow-lg">
-                    <img
-                      src={corporateTrainingCover}
-                      alt="Corporate Training Session by Dr. Yash"
-                      className="w-full h-64 md:h-80 lg:h-96 object-cover object-top"
-                    />
-                  </div>
-                )}
 
                 <div className={`grid lg:grid-cols-2 gap-12 items-start ${
                   index % 2 === 1 ? "lg:grid-flow-dense" : ""
