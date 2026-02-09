@@ -13,6 +13,7 @@ import { Layout } from "@/components/layout/Layout";
 import { GoogleReviews } from "@/components/home/GoogleReviews";
 import { SuccessStories } from "@/components/home/SuccessStories";
 import heroBg from "@/assets/hero-bg.jpg";
+import aboutBg from "@/assets/about-bg.png";
 
 const stats = [
   { number: "1000+", label: "Lives Transformed" },
@@ -131,8 +132,13 @@ export default function Home() {
       <SuccessStories />
 
       {/* About Introduction */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${aboutBg})` }}
+        />
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
               <Sparkles size={18} />
