@@ -83,10 +83,10 @@ export default function Home() {
             <p className="text-gold font-medium mb-4 animate-fade-up opacity-0 stagger-1">
               Yugandhar Academic Services for Harmony
             </p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-up opacity-0 stagger-2">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 animate-fade-up opacity-0 stagger-2">
               Unleash the <span className="text-gradient">Infinity</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl animate-fade-up opacity-0 stagger-3">
+            <p className="text-base md:text-lg text-primary-foreground/90 mb-8 max-w-xl animate-fade-up opacity-0 stagger-3 font-medium">
               Break through limitations, achieve self-mastery, and unlock your
               highest potential through holistic personal development and
               transformational coaching.
