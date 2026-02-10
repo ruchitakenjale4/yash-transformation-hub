@@ -3,6 +3,7 @@ import { Sparkles, Target, Eye, Heart, CheckCircle, ArrowRight, Award, Graduatio
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import drYashPhoto from "@/assets/dr-yash.png";
+import aboutHeroBg from "@/assets/about-hero-bg.png";
 const values = [{
   icon: Brain,
   title: "Science-Backed & Holistic",
@@ -82,24 +83,28 @@ export default function About() {
       <meta name="description" content="Learn about Y.A.S.H. and Dr. Yash Rajesh Kenjale's mission to help individuals achieve holistic well-being through transformational coaching and personal development." />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-section-gradient">
-        <div className="container mx-auto px-4">
+      <section className="pt-12 pb-20 relative">
+        <div className="absolute inset-0 z-0">
+          <img src={aboutHeroBg} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/75" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
               <Sparkles size={18} />
               About Us
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               Empowering You to{" "}
               <span className="text-gradient">Unleash the Infinity</span>
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="text-primary-foreground/90 text-lg leading-relaxed mb-6">
               At Yugandhar Academic Services for Harmony (Y.A.S.H.), we believe
               that true transformation is not a luxury—it is essential. In
               today's fast-paced world, individuals and organizations often find
               themselves stuck in cycles of stress, self-doubt, and stagnation.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-primary-foreground/90 text-lg leading-relaxed">
               Y.A.S.H. exists to break those patterns, empower individuals to
               take charge of their lives, and help them unlock their highest
               potential. Rooted in the philosophy of self-mastery, holistic
