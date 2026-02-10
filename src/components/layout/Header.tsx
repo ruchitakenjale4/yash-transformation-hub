@@ -28,7 +28,7 @@ export function Header() {
               className="w-14 h-14 object-contain"
             />
             <div className="hidden sm:block">
-              <span className="font-display text-xl font-semibold text-foreground">Y.A.S.H.</span>
+              <span className="font-sans text-xl font-bold text-foreground">Y.A.S.H.</span>
               <p className="text-xs text-muted-foreground">Unleash the Infinity</p>
             </div>
           </Link>
