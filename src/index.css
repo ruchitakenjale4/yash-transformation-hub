@@ -127,9 +127,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display uppercase font-normal;
-    letter-spacing: 0.08em;
-    -webkit-text-stroke: 0.2px currentColor;
+    @apply font-sans uppercase font-bold;
+    letter-spacing: 0.05em;
   }
 }
 
