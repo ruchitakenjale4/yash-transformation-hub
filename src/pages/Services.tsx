@@ -36,7 +36,7 @@ const services = [
       "Optimize strategies for sustainable growth",
       "Unleash Exponential Potentials",
     ],
-    formUrl: "https://forms.google.com/example-detox",
+    formUrl: "https://detox-digital-clarity.lovable.app/",
     cta: "Register for D.E.T.O.X.",
   },
   {
@@ -179,14 +179,16 @@ export default function Services() {
                         Loading…
                       </iframe>
                     ) : service.id === "detox" ? (
-                      <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfq9PzH-gr4NcH_aGPvjaj3k2GD37H9sp-QMMgcq62yF8_Fng/viewform?embedded=true"
-                        className="w-full min-h-[600px] rounded-xl border-0"
-                        title={`${service.title} Inquiry Form`}
-                        loading="lazy"
-                      >
-                        Loading…
-                      </iframe>
+                      <div className="text-center py-8">
+                        <p className="text-muted-foreground mb-6">
+                          Register for our next Digital D.E.T.O.X. event through our dedicated registration page.
+                        </p>
+                        <Button variant="gold" size="lg" asChild>
+                          <a href="https://detox-digital-clarity.lovable.app/" target="_blank" rel="noopener noreferrer">
+                            Register Now <ArrowRight className="ml-2" />
+                          </a>
+                        </Button>
+                      </div>
                     ) : (
                       <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLScdlRVQu5Td544UASpgbx2GkcCW_aDHfzGrojo3uZzTCKDPGw/viewform?embedded=true"
