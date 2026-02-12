@@ -115,38 +115,47 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services Cards */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className="group bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-gold/30 flex flex-col"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <service.icon className="w-7 h-7 text-gold" />
+      {/* Services Sections - Alternating Light/Dark */}
+      {services.map((service, index) => {
+        const isDark = index % 2 !== 0;
+        return (
+          <section
+            key={service.id}
+            id={service.id}
+            className={`py-20 ${isDark ? "bg-hero-gradient text-primary-foreground" : "bg-background"}`}
+          >
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${isDark ? "bg-primary-foreground/10" : "bg-gold/10"}`}>
+                    <service.icon className={`w-7 h-7 ${isDark ? "text-gold-light" : "text-gold"}`} />
+                  </div>
+                  <div>
+                    <span className={`font-medium text-sm ${isDark ? "text-gold-light" : "text-gold"}`}>
+                      {service.subtitle}
+                    </span>
+                    <h2 className={`font-display text-3xl md:text-4xl font-bold ${isDark ? "text-primary-foreground" : "text-foreground"}`}>
+                      {service.title}
+                    </h2>
+                  </div>
                 </div>
 
-                <span className="text-gold font-medium text-sm">{service.subtitle}</span>
-                <h2 className="font-display text-2xl font-bold text-foreground mt-1 mb-4">
-                  {service.title}
-                </h2>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                <p className={`text-lg leading-relaxed mb-8 ${isDark ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
                   {service.description}
                 </p>
 
-                <ul className="space-y-2.5 mb-8 flex-1">
+                <ul className="grid sm:grid-cols-2 gap-3 mb-10">
                   {service.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-start gap-2.5">
-                      <CheckCircle className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                      <span className="text-foreground text-sm">{feature}</span>
+                      <CheckCircle className={`w-5 h-5 shrink-0 mt-0.5 ${isDark ? "text-gold-light" : "text-gold"}`} />
+                      <span className={`text-sm ${isDark ? "text-primary-foreground/90" : "text-foreground"}`}>
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
 
-                <Button variant="gold" size="lg" className="w-full" asChild>
+                <Button variant={isDark ? "hero" : "gold"} size="lg" asChild>
                   <a
                     href={service.landingUrl}
                     target={service.landingUrl !== "#" ? "_blank" : undefined}
@@ -156,10 +165,10 @@ export default function Services() {
                   </a>
                 </Button>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        );
+      })}
 
       {/* Process Section */}
       <section className="py-20 bg-background">
