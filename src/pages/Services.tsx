@@ -10,7 +10,8 @@ const services = [
     icon: User,
     title: "One-to-One Sessions",
     subtitle: "Personalized Transformational Coaching",
-    description: "Experience deeply personalized, confidential coaching sessions designed to address your unique challenges and goals. Our one-to-one sessions provide a safe space for exploration, healing, and breakthrough.",
+    description:
+      "Experience deeply personalized, confidential coaching sessions designed to address your unique challenges and goals. Our one-to-one sessions provide a safe space for exploration, healing, and breakthrough.",
     features: [
       "Mindset Reprogramming & Limiting Belief Clearing",
       "Emotional Stability & Stress Management",
@@ -19,8 +20,7 @@ const services = [
       "Work-Life Balance & Personal Fulfillment",
       "Relationship Dynamics & Communication Skills",
     ],
-    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfT9J6XMYTjuYTqqyF9/viewform?embedded=true",
-    embedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfT9J6XMYTjuYTqqyF9/viewform?embedded=true",
+    landingUrl: "#", // TODO: replace with actual URL
     cta: "Book Your Session",
   },
   {
@@ -28,7 +28,8 @@ const services = [
     icon: Calendar,
     title: "Digital D.E.T.O.X.",
     subtitle: "Signature Transformation Event",
-    description: "Our flagship event is a structured transformation experience based on the D.E.T.O.X. framework. Disconnect from distractions, reconnect with your true self, and emerge with clarity, purpose, and renewed energy.",
+    description:
+      "Our flagship event is a structured transformation experience based on the D.E.T.O.X. framework. Disconnect from distractions, reconnect with your true self, and emerge with clarity, purpose, and renewed energy.",
     features: [
       "Break Free from Digital Loop",
       "Learn the Success Pattern",
@@ -36,7 +37,7 @@ const services = [
       "Optimize strategies for sustainable growth",
       "Unleash Exponential Potentials",
     ],
-    formUrl: "https://detox-digital-clarity.lovable.app/",
+    landingUrl: "https://detox-digital-clarity.lovable.app/",
     cta: "Register for D.E.T.O.X.",
   },
   {
@@ -44,7 +45,8 @@ const services = [
     icon: Building2,
     title: "Corporate Training",
     subtitle: "Organizational Excellence Programs",
-    description: "Empower your teams with cutting-edge training programs focused on leadership development, emotional intelligence, and workplace resilience. We help organizations build high-performing teams that thrive.",
+    description:
+      "Empower your teams with cutting-edge training programs focused on leadership development, emotional intelligence, and workplace resilience. We help organizations build high-performing teams that thrive.",
     features: [
       "Leadership & Management Development",
       "Emotional Intelligence in the Workplace",
@@ -53,7 +55,7 @@ const services = [
       "Communication & Conflict Resolution",
       "Employee Well-being & Engagement Programs",
     ],
-    formUrl: "https://forms.google.com/example-corporate",
+    landingUrl: "#", // TODO: replace with actual URL
     cta: "Request Corporate Training",
   },
 ];
@@ -87,7 +89,7 @@ export default function Services() {
               <span className="text-gradient">Expert Guidance</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              We offer a range of high-impact coaching, training, and transformation programs 
+              We offer a range of high-impact coaching, training, and transformation programs
               designed to create lasting breakthroughs in personal and professional life.
             </p>
           </div>
@@ -113,99 +115,46 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services Detail */}
+      {/* Services Cards */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="space-y-24">
-            {services.map((service, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="space-y-8"
+                className="group bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-gold/30 flex flex-col"
               >
-
-                <div className={`grid lg:grid-cols-2 gap-12 items-start ${
-                  index % 2 === 1 ? "lg:grid-flow-dense" : ""
-                }`}>
-                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-gold" />
-                  </div>
-                  <span className="text-gold font-medium text-sm">{service.subtitle}</span>
-                  <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                    {service.title}
-                  </h2>
-                  <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-4">
-                    What's Included:
-                  </h3>
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                        <span className="text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button variant="gold" size="lg" asChild>
-                    <Link to="/contact">
-                      {service.cta} <ArrowRight className="ml-2" />
-                    </Link>
-                  </Button>
+                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+                  <service.icon className="w-7 h-7 text-gold" />
                 </div>
 
-                <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                  <div className="bg-card rounded-2xl border border-border p-8 shadow-lg">
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-4">
-                      Inquire About {service.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-6">
-                      Fill out our inquiry form and we'll get back to you within 24 hours with 
-                      personalized recommendations.
-                    </p>
-                    
-                    {/* Google Form Embed */}
-                    {service.id === "one-to-one" ? (
-                      <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSepZ5CmqAxwVlrC95mVGeV8xENUAyI_IROK5Lf8DaFBZMjCUQ/viewform?embedded=true"
-                        className="w-full min-h-[600px] rounded-xl border-0"
-                        title={`${service.title} Inquiry Form`}
-                        loading="lazy"
-                      >
-                        Loading…
-                      </iframe>
-                    ) : service.id === "detox" ? (
-                      <div className="text-center py-8">
-                        <p className="text-muted-foreground mb-6">
-                          Register for our next Digital D.E.T.O.X. event through our dedicated registration page.
-                        </p>
-                        <Button variant="gold" size="lg" asChild>
-                          <a href="https://detox-digital-clarity.lovable.app/" target="_blank" rel="noopener noreferrer">
-                            Register Now <ArrowRight className="ml-2" />
-                          </a>
-                        </Button>
-                      </div>
-                    ) : (
-                      <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLScdlRVQu5Td544UASpgbx2GkcCW_aDHfzGrojo3uZzTCKDPGw/viewform?embedded=true"
-                        className="w-full min-h-[600px] rounded-xl border-0"
-                        title={`${service.title} Inquiry Form`}
-                        loading="lazy"
-                      >
-                        Loading…
-                      </iframe>
-                    )}
+                <span className="text-gold font-medium text-sm">{service.subtitle}</span>
+                <h2 className="font-display text-2xl font-bold text-foreground mt-1 mb-4">
+                  {service.title}
+                </h2>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  {service.description}
+                </p>
 
-                    <p className="text-muted-foreground text-xs mt-4 text-center">
-                      Your information is kept confidential and secure.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                <ul className="space-y-2.5 mb-8 flex-1">
+                  {service.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-start gap-2.5">
+                      <CheckCircle className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                      <span className="text-foreground text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button variant="gold" size="lg" className="w-full" asChild>
+                  <a
+                    href={service.landingUrl}
+                    target={service.landingUrl !== "#" ? "_blank" : undefined}
+                    rel={service.landingUrl !== "#" ? "noopener noreferrer" : undefined}
+                  >
+                    {service.cta} <ArrowRight className="ml-2" />
+                  </a>
+                </Button>
               </div>
             ))}
           </div>
