@@ -97,7 +97,7 @@ export default function Services() {
       </section>
 
       {/* Expertise Overview */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {expertise.map((item, index) => (
