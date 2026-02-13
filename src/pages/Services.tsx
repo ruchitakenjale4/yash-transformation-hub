@@ -84,11 +84,11 @@ export default function Services() {
               <Sparkles size={18} />
               Our Services
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               Transform Your Life with{" "}
               <span className="text-gradient">Expert Guidance</span>
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-primary-foreground/80 text-lg leading-relaxed">
               We offer a range of high-impact coaching, training, and transformation programs
               designed to create lasting breakthroughs in personal and professional life.
             </p>
