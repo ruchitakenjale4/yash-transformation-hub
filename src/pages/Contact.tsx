@@ -117,10 +117,11 @@ export default function Contact() {
       />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 text-gold-light font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold-light font-semibold mb-4 tracking-widest uppercase text-sm">
               <Sparkles size={18} />
               Get In Touch
             </span>
@@ -138,12 +139,12 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-8">
                 Send Us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -151,7 +152,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-foreground mb-2"
+                      className="block text-sm font-semibold text-foreground mb-2 tracking-wide"
                     >
                       Full Name *
                     </label>
@@ -162,13 +163,13 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Your full name"
                       required
-                      className="h-12"
+                      className="h-12 rounded-xl border-border/50 focus:border-gold transition-colors"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-foreground mb-2"
+                      className="block text-sm font-semibold text-foreground mb-2 tracking-wide"
                     >
                       Email Address *
                     </label>
@@ -180,7 +181,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="your@email.com"
                       required
-                      className="h-12"
+                      className="h-12 rounded-xl border-border/50 focus:border-gold transition-colors"
                     />
                   </div>
                 </div>
@@ -189,7 +190,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-foreground mb-2"
+                      className="block text-sm font-semibold text-foreground mb-2 tracking-wide"
                     >
                       Phone Number
                     </label>
@@ -200,13 +201,13 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
-                      className="h-12"
+                      className="h-12 rounded-xl border-border/50 focus:border-gold transition-colors"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-medium text-foreground mb-2"
+                      className="block text-sm font-semibold text-foreground mb-2 tracking-wide"
                     >
                       Subject *
                     </label>
@@ -217,7 +218,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="How can we help?"
                       required
-                      className="h-12"
+                      className="h-12 rounded-xl border-border/50 focus:border-gold transition-colors"
                     />
                   </div>
                 </div>
@@ -225,7 +226,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-foreground mb-2"
+                    className="block text-sm font-semibold text-foreground mb-2 tracking-wide"
                   >
                     Your Message *
                   </label>
@@ -237,7 +238,7 @@ export default function Contact() {
                     placeholder="Tell us about your goals and how we can help you..."
                     required
                     rows={6}
-                    className="resize-none"
+                    className="resize-none rounded-xl border-border/50 focus:border-gold transition-colors"
                   />
                 </div>
 
@@ -261,21 +262,21 @@ export default function Contact() {
 
             {/* Contact Info */}
             <div>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-8">
                 Contact Information
               </h2>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-10">
                 {contactInfo.map((info, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-4 bg-muted rounded-xl"
+                    className="flex items-start gap-4 p-5 glass-card rounded-2xl hover:shadow-md transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors group-hover:scale-105">
                       <info.icon className="w-5 h-5 text-gold" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground font-medium tracking-wide">
                         {info.label}
                       </p>
                       {info.href ? (
@@ -289,12 +290,12 @@ export default function Contact() {
                               ? "noopener noreferrer"
                               : undefined
                           }
-                          className="text-foreground font-medium hover:text-gold transition-colors"
+                          className="text-foreground font-semibold hover:text-gold transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-foreground font-medium">
+                        <p className="text-foreground font-semibold">
                           {info.value}
                         </p>
                       )}
@@ -304,18 +305,18 @@ export default function Contact() {
               </div>
 
               {/* Social Links */}
-              <div className="mb-8">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-4">
+              <div className="mb-10">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-4 tracking-wider">
                   Follow Us
                 </h3>
-                <div className="flex gap-4">
+                <div className="flex gap-3">
                   {socialLinks.map((social) => (
                     <a
                       key={social.label}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center text-muted-foreground transition-all ${social.color}`}
+                      className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center text-muted-foreground transition-all duration-300 hover:scale-105 ${social.color}`}
                       aria-label={social.label}
                     >
                       <social.icon size={20} />
@@ -325,44 +326,50 @@ export default function Contact() {
               </div>
 
               {/* YouTube Section */}
-              <div className="p-6 bg-hero-gradient rounded-2xl text-primary-foreground">
-                <div className="flex items-center gap-3 mb-4">
-                  <Youtube className="w-8 h-8 text-gold" />
-                  <h3 className="font-display text-lg font-semibold">
-                    Watch on YouTube
-                  </h3>
+              <div className="p-6 bg-hero-gradient rounded-2xl text-primary-foreground relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-gold/10 blur-2xl" />
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Youtube className="w-8 h-8 text-gold" />
+                    <h3 className="font-display text-lg font-semibold tracking-wider">
+                      Watch on YouTube
+                    </h3>
+                  </div>
+                  <p className="text-primary-foreground/80 text-sm mb-4 leading-relaxed">
+                    Subscribe to our channel for free insights, transformation
+                    tips, and behind-the-scenes content from our events.
+                  </p>
+                  <Button variant="hero" size="sm" asChild>
+                    <a
+                      href="https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Subscribe Now
+                    </a>
+                  </Button>
                 </div>
-                <p className="text-primary-foreground/80 text-sm mb-4">
-                  Subscribe to our channel for free insights, transformation
-                  tips, and behind-the-scenes content from our events.
-                </p>
-                <Button variant="hero" size="sm" asChild>
-                  <a
-                    href="https://www.youtube.com/channel/UCro4sMAAOKn4qJpKg9qrJXQ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Subscribe Now
-                  </a>
-                </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
       {/* CTA */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-section-gradient">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center bg-card rounded-2xl p-12 border border-border shadow-lg">
+          <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gold-gradient rounded-full" />
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Book a Free Discovery Call
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
               Not sure which service is right for you? Let's talk. Schedule a
               complimentary 20-minute call to discuss your goals and explore how
               we can help.
+            </p>
+            <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
+              ✦ No commitment required • Response within 24 hours ✦
             </p>
             <Button variant="gold" size="lg" onClick={handleScheduleCall}>
               Schedule Your Call

@@ -54,12 +54,16 @@
     --gradient-gold: linear-gradient(135deg, hsl(42 60% 58%) 0%, hsl(42 60% 68%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 33% 98%) 100%);
     --gradient-section: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(40 20% 94%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 100% / 0.6) 100%);
 
-    /* Shadows */
+    /* Premium Shadows */
     --shadow-sm: 0 2px 8px hsl(233 51% 21% / 0.05);
     --shadow-md: 0 4px 20px hsl(233 51% 21% / 0.08);
     --shadow-lg: 0 8px 40px hsl(233 51% 21% / 0.12);
+    --shadow-xl: 0 20px 60px hsl(233 51% 21% / 0.15);
     --shadow-gold: 0 4px 20px hsl(42 60% 58% / 0.3);
+    --shadow-gold-lg: 0 8px 40px hsl(42 60% 58% / 0.4);
+    --shadow-glow: 0 0 30px hsl(42 60% 58% / 0.5);
 
     /* Sidebar tokens */
     --sidebar-background: 0 0% 98%;
@@ -154,6 +158,66 @@
     box-shadow: var(--shadow-gold);
   }
 
+  /* Premium glass card effect */
+  .glass-card {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.3);
+  }
+
+  .glass-dark {
+    background: hsl(233 51% 21% / 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.1);
+  }
+
+  /* Premium glow effect for CTAs */
+  .glow-gold {
+    box-shadow: var(--shadow-gold-lg);
+    position: relative;
+  }
+
+  .glow-gold::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--gradient-gold);
+    opacity: 0;
+    z-index: -1;
+    filter: blur(12px);
+    transition: opacity 0.4s ease;
+  }
+
+  .glow-gold:hover::before {
+    opacity: 0.6;
+  }
+
+  /* Premium divider */
+  .premium-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.4), transparent);
+  }
+
+  /* Shimmer effect for premium badges */
+  .shimmer {
+    background: linear-gradient(
+      110deg,
+      transparent 25%,
+      hsl(42 60% 58% / 0.15) 37%,
+      transparent 63%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Premium stat counter style */
+  .stat-glow {
+    text-shadow: 0 0 30px hsl(42 60% 58% / 0.3);
+  }
+
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
@@ -221,6 +285,24 @@
   }
   50% {
     opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px hsl(42 60% 58% / 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px hsl(42 60% 58% / 0.6), 0 0 60px hsl(42 60% 58% / 0.2);
   }
 }
 

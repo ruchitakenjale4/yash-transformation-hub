@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,14 +15,14 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
         ghost: "hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-gold-gradient text-foreground font-semibold shadow-gold hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]",
-        hero: "bg-gold-gradient text-foreground font-semibold shadow-gold hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] text-base",
-        heroOutline: "border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 hover:border-primary-foreground/50",
+        gold: "bg-gold-gradient text-foreground font-bold tracking-wide shadow-gold hover:shadow-[0_8px_40px_hsl(42_60%_58%/0.5)] hover:scale-[1.03] active:scale-[0.98] relative overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_100%/0.2)_37%,transparent_63%)] before:bg-[length:200%_100%] hover:before:animate-[shimmer_1.5s_ease-in-out]",
+        hero: "bg-gold-gradient text-foreground font-bold tracking-wide shadow-gold hover:shadow-[0_8px_40px_hsl(42_60%_58%/0.5)] hover:scale-[1.03] active:scale-[0.98] text-base relative overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_100%/0.2)_37%,transparent_63%)] before:bg-[length:200%_100%] hover:before:animate-[shimmer_1.5s_ease-in-out]",
+        heroOutline: "border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 hover:border-primary-foreground/50 font-bold tracking-wide",
       },
       size: {
-        default: "h-10 px-5 py-2",
+        default: "h-11 px-6 py-2",
         sm: "h-9 rounded-md px-4",
-        lg: "h-12 rounded-lg px-8 text-base",
+        lg: "h-13 rounded-xl px-8 text-base",
         xl: "h-14 rounded-xl px-10 text-lg",
         icon: "h-10 w-10",
       },

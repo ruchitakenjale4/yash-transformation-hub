@@ -90,7 +90,7 @@ export default function About() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
               <Sparkles size={18} />
               About Us
             </span>
@@ -117,28 +117,31 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-2xl bg-hero-gradient text-primary-foreground">
-              <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mb-6">
-                <Eye className="w-7 h-7 text-gold" />
+            <div className="p-8 rounded-3xl bg-hero-gradient text-primary-foreground relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-gold/10 blur-2xl" />
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mb-6">
+                  <Eye className="w-7 h-7 text-gold" />
+                </div>
+                <h2 className="font-display text-2xl font-bold mb-4 tracking-wider">
+                  Our Vision
+                </h2>
+                <p className="text-primary-foreground/90 leading-relaxed">
+                  To establish health in every aspect of life and see individuals
+                  operating at their highest potential—not just in their careers,
+                  but in their overall well-being and personal fulfillment.
+                </p>
               </div>
-              <h2 className="font-display text-2xl font-bold mb-4">
-                Our Vision
-              </h2>
-              <p className="text-primary-foreground/90 leading-relaxed">
-                To establish health in every aspect of life and see individuals
-                operating at their highest potential—not just in their careers,
-                but in their overall well-being and personal fulfillment.
-              </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-card border border-border">
+            <div className="p-8 rounded-3xl glass-card shadow-md">
               <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-gold" />
               </div>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-4 tracking-wider">
                 Our Mission
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -153,17 +156,17 @@ export default function About() {
       </section>
 
       {/* What We Do */}
-      <section className="py-20 bg-muted">
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
               <Sparkles size={18} />
               What We Do
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               High-Impact Coaching & Training
             </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
               At Y.A.S.H., we specialize in high-impact coaching, training, and
               psychological consulting to create breakthroughs in personal and
               professional life. We believe that true success is not just about
@@ -174,14 +177,14 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {expertise.map((item, index) => <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all">
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+            {expertise.map((item, index) => <div key={index} className="p-6 glass-card rounded-2xl hover:shadow-lg transition-all duration-500 group hover:-translate-y-1">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                   <item.icon className="w-6 h-6 text-gold" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2 tracking-wide">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>)}
@@ -190,43 +193,43 @@ export default function About() {
       </section>
 
       {/* Why Y.A.S.H. */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
               <Sparkles size={18} />
               Why Y.A.S.H.?
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Transformation is Personal, So is Our Approach
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               We don't believe in one-size-fits-all solutions. At Y.A.S.H., we
               don't just inspire change—we create it.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => <div key={index} className="p-6 bg-card rounded-xl border border-border hover:shadow-lg hover:border-gold/30 transition-all text-center">
-                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+            {values.map((value, index) => <div key={index} className="p-6 glass-card rounded-2xl hover:shadow-lg hover:border-gold/30 transition-all duration-500 text-center group hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                   <value.icon className="w-7 h-7 text-gold" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2 tracking-wide">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {value.description}
                 </p>
               </div>)}
           </div>
 
           <div className="mt-16 text-center">
-            <div className="inline-block p-8 bg-muted rounded-2xl">
+            <div className="inline-block p-8 glass-card rounded-3xl shadow-md">
               <p className="font-display text-xl md:text-2xl text-foreground italic mb-2">
                 "Because your potential is limitless. Because you are meant for
                 more."
               </p>
-              <p className="text-gold font-semibold">
+              <p className="text-gold font-semibold tracking-wide">
                 Because it's time to Unleash the Infinity. 🚀
               </p>
             </div>
@@ -424,16 +427,20 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
               It's Time to Break Barriers & Rewrite Your Story
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8">
+            <p className="text-primary-foreground/80 text-lg mb-4 leading-relaxed">
               At Y.A.S.H., we don't just inspire change—we create it. Ready to
               break through your limitations, tap into your potential, and lead
               a life of purpose, confidence, and fulfillment?
+            </p>
+            <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
+              ✦ 1000+ lives transformed • Science-backed approach ✦
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
