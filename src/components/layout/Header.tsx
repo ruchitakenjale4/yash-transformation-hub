@@ -17,7 +17,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/30 shadow-sm">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -25,22 +25,22 @@ export function Header() {
             <img 
               src={logoLight} 
               alt="Y.A.S.H. Logo" 
-              className="w-14 h-14 object-contain"
+              className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div className="hidden sm:block">
-              <span className="font-sans text-xl font-bold text-foreground">Y.A.S.H.</span>
-              <p className="text-xs text-muted-foreground">Unleash the Infinity</p>
+              <span className="font-sans text-xl font-bold text-foreground tracking-wide">Y.A.S.H.</span>
+              <p className="text-xs text-muted-foreground tracking-widest uppercase">Unleash the Infinity</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "relative text-sm font-medium transition-colors hover:text-primary",
+                  "relative text-sm font-semibold tracking-wide transition-colors hover:text-primary uppercase",
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -73,7 +73,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+          <div className="md:hidden py-6 border-t border-border/30 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -81,7 +81,7 @@ export function Header() {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-base font-medium py-2 transition-colors",
+                    "text-base font-semibold py-2 transition-colors uppercase tracking-wide",
                     location.pathname === link.path
                       ? "text-primary"
                       : "text-muted-foreground hover:text-primary"

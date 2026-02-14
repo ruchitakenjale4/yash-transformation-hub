@@ -77,10 +77,11 @@ export default function Services() {
       />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 text-gold-light font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold-light font-semibold mb-4 tracking-widest uppercase text-sm">
               <Sparkles size={18} />
               Our Services
             </span>
@@ -101,11 +102,11 @@ export default function Services() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {expertise.map((item, index) => (
-              <div key={index} className="text-center p-6">
-                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center p-6 group">
+                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                   <item.icon className="w-7 h-7 text-gold" />
                 </div>
-                <h3 className="font-display text-sm font-semibold text-foreground mb-1">
+                <h3 className="font-display text-sm font-semibold text-foreground mb-1 tracking-wide">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-xs">{item.description}</p>
@@ -171,10 +172,10 @@ export default function Services() {
       })}
 
       {/* Process Section */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
               <Sparkles size={18} />
               Our Process
             </span>
@@ -190,13 +191,13 @@ export default function Services() {
               { step: "03", title: "Deep Work", description: "Engage in transformative sessions with expert guidance" },
               { step: "04", title: "Lasting Change", description: "Integrate learnings for sustainable growth and success" },
             ].map((item, index) => (
-              <div key={index} className="relative text-center">
-                <div className="w-16 h-16 rounded-full bg-hero-gradient flex items-center justify-center mx-auto mb-6">
+              <div key={index} className="relative text-center group">
+                <div className="w-16 h-16 rounded-full bg-hero-gradient flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
                   <span className="font-display text-xl font-bold text-primary-foreground">
                     {item.step}
                   </span>
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2 tracking-wide">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -211,15 +212,19 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your Transformation?
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8">
+            <p className="text-primary-foreground/80 text-lg mb-4 leading-relaxed">
               Book a free discovery call to discuss your goals and explore how our services 
               can help you achieve lasting breakthroughs.
+            </p>
+            <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
+              ✦ Free consultation • Personalized approach • Lasting results ✦
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>

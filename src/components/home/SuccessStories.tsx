@@ -29,10 +29,10 @@ const testimonials = [
 
 export function SuccessStories() {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-24 bg-section-gradient">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+          <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
             <Sparkles size={18} />
             Success Stories
           </span>
@@ -45,20 +45,21 @@ export function SuccessStories() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all relative"
+              className="glass-card rounded-2xl p-8 hover:shadow-xl transition-all duration-500 relative group hover:-translate-y-1"
             >
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-16 h-16 rounded-full object-cover absolute top-6 right-6 border-4 border-gold"
+                className="w-16 h-16 rounded-full object-cover absolute top-6 right-6 border-4 border-gold shadow-gold transition-transform duration-300 group-hover:scale-110"
               />
               <Quote className="w-10 h-10 text-gold/30 mb-4 mt-12" />
               <p className="text-foreground mb-6 leading-relaxed text-sm">
                 "{testimonial.content}"
               </p>
+              <div className="premium-divider mb-4" />
               <div className="flex items-center gap-4">
                 <div className="flex-1">
-                  <p className="font-semibold text-foreground uppercase text-sm">
+                  <p className="font-semibold text-foreground uppercase text-sm tracking-wide">
                     {testimonial.name}
                   </p>
                   <p className="text-sm text-muted-foreground">

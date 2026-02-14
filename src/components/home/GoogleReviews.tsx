@@ -44,16 +44,16 @@ const reviews = [
 
 export function GoogleReviews() {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-24 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-2 mb-4">
             <img
               src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
               alt="Google"
               className="h-6 object-contain"
             />
-            <span className="text-muted-foreground font-medium">Reviews</span>
+            <span className="text-muted-foreground font-semibold tracking-wide">Reviews</span>
           </div>
           <div className="flex items-center justify-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
@@ -68,7 +68,7 @@ export function GoogleReviews() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto px-12 mb-10">
+        <div className="max-w-4xl mx-auto px-12 mb-12">
           <Carousel
             opts={{
               align: "start",
@@ -85,7 +85,7 @@ export function GoogleReviews() {
             <CarouselContent>
               {reviews.map((review, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                  <div className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow h-full">
+                  <div className="glass-card p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-500 h-full group hover:-translate-y-1">
                     <div className="flex items-center gap-1 mb-3">
                       {[...Array(review.rating)].map((_, i) => (
                         <Star
@@ -97,6 +97,7 @@ export function GoogleReviews() {
                     <p className="text-foreground mb-4 text-sm leading-relaxed">
                       "{review.text}"
                     </p>
+                    <div className="premium-divider mb-3" />
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="font-semibold text-foreground text-sm">
