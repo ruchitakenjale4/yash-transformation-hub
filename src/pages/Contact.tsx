@@ -117,18 +117,18 @@ export default function Contact() {
       />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-section-gradient">
+      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 text-gold font-medium mb-4">
+            <span className="inline-flex items-center gap-2 text-gold-light font-medium mb-4">
               <Sparkles size={18} />
               Get In Touch
             </span>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               Start Your{" "}
               <span className="text-gradient">Transformation Journey</span>
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-primary-foreground/80 text-lg leading-relaxed">
               Ready to break through your limitations and unleash your infinite
               potential? Reach out to us and take the first step towards lasting
               change.
