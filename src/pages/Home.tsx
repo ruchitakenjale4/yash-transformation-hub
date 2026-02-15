@@ -132,10 +132,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="relative -mt-10 z-20">
             <div className="glass-card rounded-2xl shadow-lg p-8 md:p-10">
-              <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24">
+              <div className="flex flex-wrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
-                  <div key={index} className="text-center group">
-                    <p className="font-display text-4xl md:text-5xl font-bold text-primary mb-2 stat-glow transition-transform duration-300 group-hover:scale-105">
+                  <div key={index} className="text-center group px-8 md:px-16 lg:px-24">
+                    <p className="font-display text-4xl md:text-5xl font-bold text-gold-dark mb-2 stat-glow transition-transform duration-300 group-hover:scale-105">
                       {stat.number}
                     </p>
                     <p className="text-muted-foreground text-sm font-medium tracking-wider uppercase">{stat.label}</p>
