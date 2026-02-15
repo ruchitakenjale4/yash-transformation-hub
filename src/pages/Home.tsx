@@ -14,6 +14,7 @@ import { GoogleReviews } from "@/components/home/GoogleReviews";
 import { SuccessStories } from "@/components/home/SuccessStories";
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutBg from "@/assets/about-bg.png";
+import yashSpeaking from "@/assets/yash-speaking.jpg";
 
 const stats = [
   { number: "1000+", label: "Lives Transformed" },
@@ -287,14 +288,11 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-hero-gradient p-8 flex items-center justify-center shadow-xl">
-                <div className="text-center">
-                  <p className="font-display text-6xl md:text-8xl font-bold text-gold mb-4">
-                    ∞
-                  </p>
-                  <p className="font-display text-2xl text-primary-foreground font-semibold">
-                    Your Potential is Limitless
-                  </p>
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-xl relative">
+                <img src={yashSpeaking} alt="Y.A.S.H. speaking at an event" className="w-full h-full object-cover object-[65%_top]" />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary via-primary/80 to-transparent pt-16 pb-6 px-6 text-center">
+                  <p className="font-display text-5xl font-bold text-gold mb-2">∞</p>
+                  <p className="font-display text-xl text-primary-foreground font-semibold">Your Potential is Limitless</p>
                 </div>
               </div>
               <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
