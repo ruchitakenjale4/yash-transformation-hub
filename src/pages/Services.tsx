@@ -3,6 +3,7 @@ import { Sparkles, User, Calendar, Building2, CheckCircle, ArrowRight, Brain, He
 
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import servicesHeroBg from "@/assets/services-hero-bg.png";
 
 const services = [
   {
@@ -78,6 +79,8 @@ export default function Services() {
 
       {/* Hero Section */}
       <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <img src={servicesHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-primary/60" />
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
