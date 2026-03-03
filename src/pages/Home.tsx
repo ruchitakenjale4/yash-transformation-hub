@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { GoogleReviews } from "@/components/home/GoogleReviews";
 import { SuccessStories } from "@/components/home/SuccessStories";
+import { CountUpNumber } from "@/components/home/CountUpNumber";
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutBg from "@/assets/about-bg.png";
 import yashSpeaking from "@/assets/yash-speaking.jpg";
@@ -136,8 +137,8 @@ export default function Home() {
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center group px-4 md:px-8 lg:px-12">
-                    <p className="font-display text-3xl md:text-4xl font-bold text-gold-dark mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
-                      {stat.number}
+                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold-dark mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
+                      <CountUpNumber target={stat.number} />
                     </p>
                     <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">{stat.label}</p>
                   </div>
