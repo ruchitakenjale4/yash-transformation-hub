@@ -21,7 +21,7 @@ const services = [
       "Work-Life Balance & Personal Fulfillment",
       "Relationship Dynamics & Communication Skills",
     ],
-    landingUrl: "#", // TODO: replace with actual URL
+    landingUrl: "https://confident-self-journey.lovable.app",
     cta: "Book Your Session",
   },
   {
