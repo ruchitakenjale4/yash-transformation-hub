@@ -41,7 +41,7 @@ export function SuccessStories() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -69,6 +69,24 @@ export function SuccessStories() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Video Testimonial */}
+        <div className="max-w-2xl mx-auto">
+          <div className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-500">
+            <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">
+              Client Video Testimonial
+            </h3>
+            <div className="aspect-video rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/qzesyv07PyI"
+                title="Client Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
