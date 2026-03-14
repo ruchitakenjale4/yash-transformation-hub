@@ -8,6 +8,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const reviews = [
   {
@@ -44,47 +45,46 @@ const reviews = [
 
 export function GoogleReviews() {
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <img
-              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-              alt="Google"
-              className="h-6 object-contain"
-            />
-            <span className="text-muted-foreground font-semibold tracking-wide">Reviews</span>
-          </div>
-          <div className="flex items-center justify-center gap-1 mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className="w-6 h-6 fill-yellow-400 text-yellow-400"
+        <ScrollReveal>
+          <div className="text-center mb-14">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <img
+                src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                alt="Google"
+                className="h-6 object-contain"
               />
-            ))}
+              <span className="text-muted-foreground font-semibold tracking-wide">
+                Reviews
+              </span>
+            </div>
+            <div className="flex items-center justify-center gap-1 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-6 h-6 fill-yellow-400 text-yellow-400"
+                />
+              ))}
+            </div>
+            <p className="text-muted-foreground">
+              Based on reviews from our clients
+            </p>
           </div>
-          <p className="text-muted-foreground">
-            Based on reviews from our clients
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="max-w-4xl mx-auto px-12 mb-12">
           <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-              }),
-            ]}
+            opts={{ align: "start", loop: true }}
+            plugins={[Autoplay({ delay: 4000, stopOnInteraction: true })]}
             className="w-full"
           >
             <CarouselContent>
               {reviews.map((review, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/2 lg:basis-1/2"
+                >
                   <div className="glass-card p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-500 h-full group hover:-translate-y-1">
                     <div className="flex items-center gap-1 mb-3">
                       {[...Array(review.rating)].map((_, i) => (
@@ -94,7 +94,7 @@ export function GoogleReviews() {
                         />
                       ))}
                     </div>
-                    <p className="text-foreground mb-4 text-sm leading-relaxed">
+                    <p className="text-foreground/90 mb-4 text-sm leading-relaxed">
                       "{review.text}"
                     </p>
                     <div className="premium-divider mb-3" />
@@ -110,15 +110,15 @@ export function GoogleReviews() {
                       <img
                         src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
                         alt="Google"
-                        className="h-4 object-contain opacity-60"
+                        className="h-4 object-contain opacity-50"
                       />
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="border-border bg-card text-foreground hover:bg-muted" />
+            <CarouselNext className="border-border bg-card text-foreground hover:bg-muted" />
           </Carousel>
         </div>
 

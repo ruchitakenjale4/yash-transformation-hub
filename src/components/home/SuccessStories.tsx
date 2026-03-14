@@ -1,4 +1,6 @@
-import { Sparkles, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { SectionLabel } from "@/components/SectionLabel";
 import shreyaImg from "@/assets/shreya.jpg";
 import rutujaImg from "@/assets/rutuja.jpg";
 import shardulImg from "@/assets/shardul.jpg";
@@ -29,65 +31,66 @@ const testimonials = [
 
 export function SuccessStories() {
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-28 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
-            <Sparkles size={18} />
-            Success Stories
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Real Transformations, Real Results
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <SectionLabel>Success Stories</SectionLabel>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Real Transformations, Real Results
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Hear from those who took the leap and transformed their lives.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-14">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="glass-card rounded-2xl p-8 hover:shadow-xl transition-all duration-500 relative group hover:-translate-y-1"
-            >
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-16 h-16 rounded-full object-cover absolute top-6 right-6 border-4 border-gold shadow-gold transition-transform duration-300 group-hover:scale-110"
-              />
-              <Quote className="w-10 h-10 text-gold/30 mb-4 mt-12" />
-              <p className="text-foreground mb-6 leading-relaxed text-sm">
-                "{testimonial.content}"
-              </p>
-              <div className="premium-divider mb-4" />
-              <div className="flex items-center gap-4">
-                <div className="flex-1">
-                  <p className="font-semibold text-foreground uppercase text-sm tracking-wide">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
+            <ScrollReveal key={index} delay={index * 0.12}>
+              <div className="glass-card rounded-2xl p-8 hover:shadow-xl transition-all duration-500 relative group hover:-translate-y-1 h-full flex flex-col">
+                {/* Header with photo and name */}
+                <div className="flex items-center gap-4 mb-6">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-gold/40 shadow-gold"
+                  />
+                  <div>
+                    <p className="font-semibold text-foreground text-sm tracking-wide">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gold/80">{testimonial.role}</p>
+                  </div>
                 </div>
+                <Quote className="w-8 h-8 text-gold/20 mb-3" />
+                <p className="text-foreground/80 leading-relaxed text-sm flex-1">
+                  "{testimonial.content}"
+                </p>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Video Testimonial */}
-        <div className="max-w-2xl mx-auto">
-          <div className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-500">
-            <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">
-              Client Video Testimonial
-            </h3>
-            <div className="aspect-video rounded-xl overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/qzesyv07PyI"
-                title="Client Testimonial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
+        <ScrollReveal>
+          <div className="max-w-3xl mx-auto">
+            <div className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-500">
+              <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">
+                Client Video Testimonial
+              </h3>
+              <div className="aspect-video rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/qzesyv07PyI"
+                  title="Client Testimonial"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

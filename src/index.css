@@ -6,76 +6,72 @@
 
 @layer base {
   :root {
-    /* Dark theme - deep navy foundation */
-    --background: 233 51% 8%;
-    --foreground: 40 33% 95%;
+    --background: 230 25% 7%;
+    --foreground: 40 20% 93%;
 
-    --card: 233 45% 12%;
-    --card-foreground: 40 33% 95%;
+    --card: 230 30% 11%;
+    --card-foreground: 40 20% 93%;
 
-    --popover: 233 45% 12%;
-    --popover-foreground: 40 33% 95%;
+    --popover: 230 30% 11%;
+    --popover-foreground: 40 20% 93%;
 
-    /* Gold as primary for dark theme */
-    --primary: 233 51% 18%;
-    --primary-foreground: 40 33% 95%;
+    --primary: 230 30% 16%;
+    --primary-foreground: 40 20% 93%;
 
-    /* Soft teal - harmony, growth */
     --secondary: 174 42% 35%;
-    --secondary-foreground: 40 33% 95%;
+    --secondary-foreground: 40 20% 93%;
 
-    --muted: 233 40% 14%;
-    --muted-foreground: 40 20% 65%;
+    /* Muted — noticeably different from background */
+    --muted: 230 22% 13%;
+    --muted-foreground: 40 12% 55%;
 
-    /* Warm gold - premium, transformation */
     --accent: 42 60% 58%;
-    --accent-foreground: 233 51% 10%;
+    --accent-foreground: 230 30% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 233 40% 20%;
-    --input: 233 40% 20%;
+    --border: 230 20% 18%;
+    --input: 230 25% 16%;
     --ring: 42 60% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom Y.A.S.H. tokens */
+    /* Y.A.S.H. tokens */
     --gold: 42 60% 58%;
-    --gold-light: 42 60% 75%;
-    --gold-dark: 42 60% 50%;
-    --navy: 233 51% 15%;
-    --navy-light: 233 40% 28%;
+    --gold-light: 42 55% 72%;
+    --gold-dark: 42 60% 48%;
+    --navy: 230 30% 14%;
+    --navy-light: 230 22% 24%;
     --teal: 174 42% 35%;
     --teal-light: 174 35% 50%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(233 51% 12%) 0%, hsl(233 40% 20%) 50%, hsl(174 42% 25%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42 60% 58%) 0%, hsl(42 60% 68%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(233 45% 12%) 0%, hsl(233 51% 10%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(233 51% 10%) 0%, hsl(233 40% 14%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(233 45% 15% / 0.9) 0%, hsl(233 45% 12% / 0.6) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(230 30% 10%) 0%, hsl(230 22% 18%) 50%, hsl(174 30% 20%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 60% 55%) 0%, hsl(42 55% 68%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(230 30% 11%) 0%, hsl(230 25% 9%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(230 25% 9%) 0%, hsl(230 22% 13%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(230 30% 14% / 0.9) 0%, hsl(230 30% 11% / 0.6) 100%);
 
-    /* Premium Shadows */
-    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.2);
-    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.3);
-    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.4);
-    --shadow-xl: 0 20px 60px hsl(0 0% 0% / 0.5);
-    --shadow-gold: 0 4px 20px hsl(42 60% 58% / 0.3);
-    --shadow-gold-lg: 0 8px 40px hsl(42 60% 58% / 0.4);
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.25);
+    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.35);
+    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.45);
+    --shadow-xl: 0 20px 60px hsl(0 0% 0% / 0.55);
+    --shadow-gold: 0 4px 20px hsl(42 60% 58% / 0.25);
+    --shadow-gold-lg: 0 8px 40px hsl(42 60% 58% / 0.35);
     --shadow-glow: 0 0 30px hsl(42 60% 58% / 0.5);
 
     /* Sidebar tokens */
-    --sidebar-background: 233 51% 10%;
-    --sidebar-foreground: 40 33% 95%;
+    --sidebar-background: 230 25% 9%;
+    --sidebar-foreground: 40 20% 93%;
     --sidebar-primary: 42 60% 58%;
-    --sidebar-primary-foreground: 233 51% 10%;
-    --sidebar-accent: 233 40% 16%;
-    --sidebar-accent-foreground: 40 33% 95%;
-    --sidebar-border: 233 40% 20%;
+    --sidebar-primary-foreground: 230 25% 9%;
+    --sidebar-accent: 230 22% 15%;
+    --sidebar-accent-foreground: 40 20% 93%;
+    --sidebar-border: 230 20% 18%;
     --sidebar-ring: 42 60% 58%;
   }
-
 }
 
 @layer base {
@@ -93,7 +89,13 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans uppercase font-bold;
+    @apply font-sans font-bold;
+    letter-spacing: 0.02em;
+  }
+
+  /* Only display font headings get uppercase treatment */
+  .font-display {
+    text-transform: uppercase;
     letter-spacing: 0.05em;
   }
 }
@@ -120,22 +122,21 @@
     box-shadow: var(--shadow-gold);
   }
 
-  /* Premium glass card effect */
+  /* Glass card — more visible border on dark */
   .glass-card {
-    background: hsl(233 45% 15% / 0.7);
+    background: hsl(230 30% 13% / 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsl(233 40% 25% / 0.5);
+    border: 1px solid hsl(230 20% 22% / 0.6);
   }
 
   .glass-dark {
-    background: hsl(233 51% 10% / 0.6);
+    background: hsl(230 25% 9% / 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsl(0 0% 100% / 0.08);
+    border: 1px solid hsl(0 0% 100% / 0.06);
   }
 
-  /* Premium glow effect for CTAs */
   .glow-gold {
     box-shadow: var(--shadow-gold-lg);
     position: relative;
@@ -157,13 +158,16 @@
     opacity: 0.6;
   }
 
-  /* Premium divider */
   .premium-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.4), transparent);
   }
 
-  /* Shimmer effect for premium badges */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 5%, hsl(var(--border)) 50%, transparent 95%);
+  }
+
   .shimmer {
     background: linear-gradient(
       110deg,
@@ -175,21 +179,8 @@
     animation: shimmer 3s ease-in-out infinite;
   }
 
-  /* Premium stat counter style */
   .stat-glow {
     text-shadow: 0 0 30px hsl(42 60% 58% / 0.3);
-  }
-
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
   }
 
   .animate-float {
@@ -201,76 +192,22 @@
   }
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 @keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 4px 20px hsl(42 60% 58% / 0.3);
-  }
-  50% {
-    box-shadow: 0 4px 30px hsl(42 60% 58% / 0.6), 0 0 60px hsl(42 60% 58% / 0.2);
-  }
+  0%, 100% { box-shadow: 0 4px 20px hsl(42 60% 58% / 0.3); }
+  50% { box-shadow: 0 4px 30px hsl(42 60% 58% / 0.6), 0 0 60px hsl(42 60% 58% / 0.2); }
 }
-
-/* Stagger animation delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }

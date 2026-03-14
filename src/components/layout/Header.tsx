@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,22 +14,40 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30 shadow-sm">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled
+          ? "bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-lg"
+          : "bg-transparent"
+      )}
+    >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={logoLight} 
-              alt="Y.A.S.H. Logo" 
+            <img
+              src={logoLight}
+              alt="Y.A.S.H. Logo"
               className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div className="hidden sm:block">
-              <span className="font-sans text-xl font-bold text-foreground tracking-wide">Y.A.S.H.</span>
-              <p className="text-xs text-muted-foreground tracking-widest uppercase">Unleash the Infinity</p>
+              <span className="font-sans text-xl font-bold text-foreground tracking-wide">
+                Y.A.S.H.
+              </span>
+              <p className="text-xs text-muted-foreground tracking-widest uppercase">
+                Unleash the Infinity
+              </p>
             </div>
           </Link>
 
@@ -40,10 +58,10 @@ export function Header() {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "relative text-sm font-semibold tracking-wide transition-colors hover:text-primary uppercase",
+                  "relative text-sm font-semibold tracking-wide transition-colors uppercase",
                   location.pathname === link.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-gold"
+                    : "text-foreground/70 hover:text-foreground"
                 )}
               >
                 {link.name}
@@ -73,7 +91,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-6 border-t border-border/30 animate-fade-in">
+          <div className="md:hidden py-6 border-t border-border/30 animate-fade-in bg-background/95 backdrop-blur-xl">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -83,8 +101,8 @@ export function Header() {
                   className={cn(
                     "text-base font-semibold py-2 transition-colors uppercase tracking-wide",
                     location.pathname === link.path
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-primary"
+                      ? "text-gold"
+                      : "text-foreground/70 hover:text-foreground"
                   )}
                 >
                   {link.name}
