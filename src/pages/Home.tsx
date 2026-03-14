@@ -137,7 +137,7 @@ export default function Home() {
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center group px-4 md:px-8 lg:px-12">
-                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold-dark mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
+                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
                       <CountUpNumber target={stat.number} />
                     </p>
                     <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">{stat.label}</p>
@@ -248,7 +248,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-section-gradient">
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -297,7 +297,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
-                <Sparkles className="w-12 h-12 text-foreground" />
+                <Sparkles className="w-12 h-12 text-[hsl(233,51%,10%)]" />
               </div>
             </div>
           </div>
