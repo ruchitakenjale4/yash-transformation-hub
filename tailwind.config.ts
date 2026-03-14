@@ -9,13 +9,13 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1280px",
+        "2xl": "1400px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Montserrat", "system-ui", "sans-serif"],
+        display: ["Bebas Neue", "Impact", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -84,7 +84,6 @@ export default {
         sm: "var(--shadow-sm)",
         md: "var(--shadow-md)",
         lg: "var(--shadow-lg)",
-        xl: "var(--shadow-xl)",
         gold: "var(--shadow-gold)",
       },
       keyframes: {
