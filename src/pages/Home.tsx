@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Sparkles,
   Users,
   Brain,
   Heart,
@@ -13,6 +12,8 @@ import { Layout } from "@/components/layout/Layout";
 import { GoogleReviews } from "@/components/home/GoogleReviews";
 import { SuccessStories } from "@/components/home/SuccessStories";
 import { CountUpNumber } from "@/components/home/CountUpNumber";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { SectionLabel } from "@/components/SectionLabel";
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutBg from "@/assets/about-bg.png";
 import yashSpeaking from "@/assets/yash-speaking.jpg";
@@ -62,7 +63,6 @@ const detoxBenefits = [
 export default function Home() {
   return (
     <Layout>
-      {/* SEO Meta */}
       <title>
         Y.A.S.H. - Holistic Personal Development | Unleash the Infinity
       </title>
@@ -72,75 +72,93 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-right"
+          className="absolute inset-0 bg-cover bg-right scale-105"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        {/* Left-to-right gradient overlay: opaque on left, transparent on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
-            <p className="text-gold font-semibold mb-4 animate-fade-up opacity-0 stagger-1 tracking-widest uppercase text-sm">
-              Yugandhar Academic Services for Harmony
-            </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 animate-fade-up opacity-0 stagger-2">
-              Unleash the <span className="text-gradient">Infinity</span>
-            </h1>
-            <p className="text-base md:text-lg text-primary-foreground/90 mb-10 max-w-xl animate-fade-up opacity-0 stagger-3 font-medium leading-relaxed">
-              Break through limitations, achieve self-mastery, and unlock your
-              highest potential through holistic personal development and
-              transformational coaching.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 stagger-4">
-              <Button variant="hero" size="xl" asChild>
-                <Link to="/services">
-                  Explore Services <ArrowRight className="ml-2" />
-                </Link>
-              </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
-            </div>
-            {/* Social proof micro-badge */}
-            <div className="mt-8 animate-fade-up opacity-0 stagger-5">
-              <div className="inline-flex items-center gap-3 glass-dark rounded-full px-5 py-2.5">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-gold/30 border-2 border-primary-foreground/20 flex items-center justify-center">
-                      <Users className="w-3.5 h-3.5 text-gold" />
-                    </div>
-                  ))}
-                </div>
-                <span className="text-primary-foreground/80 text-sm font-medium">
-                  Join <strong className="text-gold">1000+</strong> who transformed their lives
-                </span>
+            <ScrollReveal>
+              <p className="text-gold font-semibold mb-4 tracking-[0.2em] uppercase text-xs">
+                Yugandhar Academic Services for Harmony
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[0.95]">
+                Unleash the <span className="text-gradient">Infinity</span>
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="text-base md:text-lg text-foreground/80 mb-10 max-w-xl font-medium leading-relaxed">
+                Break through limitations, achieve self-mastery, and unlock your
+                highest potential through holistic personal development and
+                transformational coaching.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.3}>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="hero" size="xl" asChild>
+                  <Link to="/services">
+                    Explore Services <ArrowRight className="ml-2" />
+                  </Link>
+                </Button>
+                <Button variant="heroOutline" size="xl" asChild>
+                  <Link to="/about">Learn More</Link>
+                </Button>
               </div>
-            </div>
+            </ScrollReveal>
+            {/* Social proof */}
+            <ScrollReveal delay={0.4}>
+              <div className="mt-10">
+                <div className="inline-flex items-center gap-3 glass-dark rounded-full px-5 py-2.5">
+                  <div className="flex -space-x-2">
+                    {[...Array(4)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="w-8 h-8 rounded-full bg-gold/20 border-2 border-foreground/10 flex items-center justify-center"
+                      >
+                        <Users className="w-3.5 h-3.5 text-gold" />
+                      </div>
+                    ))}
+                  </div>
+                  <span className="text-foreground/70 text-sm font-medium">
+                    Join <strong className="text-gold">1000+</strong> who
+                    transformed their lives
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-gold rounded-full animate-pulse-slow" />
           </div>
         </div>
       </section>
 
-      {/* Stats Section - Premium treatment */}
-      <section className="py-0">
+      {/* Stats Section */}
+      <section className="py-0 relative z-20">
         <div className="container mx-auto px-4">
-          <div className="relative -mt-10 z-20">
+          <div className="-mt-12">
             <div className="glass-card rounded-2xl shadow-lg p-8 md:p-10">
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
-                  <div key={index} className="text-center group px-4 md:px-8 lg:px-12">
+                  <div
+                    key={index}
+                    className="text-center group px-4 md:px-8 lg:px-12"
+                  >
                     <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
                       <CountUpNumber target={stat.number} />
                     </p>
-                    <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">{stat.label}</p>
+                    <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">
+                      {stat.label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -153,46 +171,43 @@ export default function Home() {
       <SuccessStories />
 
       {/* About Introduction */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutBg})` }}
         />
-        <div className="absolute inset-0 bg-primary/75" />
+        <div className="absolute inset-0 bg-background/80" />
         <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
-              <Sparkles size={18} />
-              About Y.A.S.H.
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              True Transformation is Not a Luxury—It's Essential
-            </h2>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              At Y.A.S.H., we believe in breaking patterns of stress,
-              self-doubt, and stagnation. We empower individuals to take charge
-              of their lives through holistic well-being, strategic growth, and
-              self-mastery. Our approach goes beyond motivation—we create deep,
-              lasting transformation.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <SectionLabel>About Y.A.S.H.</SectionLabel>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
+                True Transformation is Not a Luxury—It's Essential
+              </h2>
+              <p className="text-foreground/70 text-lg leading-relaxed">
+                At Y.A.S.H., we believe in breaking patterns of stress,
+                self-doubt, and stagnation. We empower individuals to take charge
+                of their lives through holistic well-being, strategic growth, and
+                self-mastery.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group p-6 glass-dark rounded-2xl hover:border-gold/50 hover:shadow-lg transition-all duration-500 hover:-translate-y-1"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-all duration-300 group-hover:scale-110">
-                  <feature.icon className="w-7 h-7 text-gold" />
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="group p-6 glass-card rounded-2xl hover:border-gold/40 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
+                  <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-all duration-300 group-hover:scale-110">
+                    <feature.icon className="w-7 h-7 text-gold" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="font-display text-lg font-semibold text-primary-foreground mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -202,135 +217,145 @@ export default function Home() {
       <GoogleReviews />
 
       {/* D.E.T.O.X. Framework Section */}
-      <section className="py-24 bg-hero-gradient text-primary-foreground relative overflow-hidden">
-        {/* Decorative elements */}
+      <section className="py-28 bg-hero-gradient text-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
-        
+        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-teal/8 blur-3xl" />
+
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
-              <Sparkles size={18} />
-              Signature Event
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-              Digital D.E.T.O.X.
-            </h2>
-            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              A structured transformation experience built on 5 powerful pillars 
-              designed to help you break free from digital distractions and 
-              reconnect with your true potential.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <SectionLabel>Signature Event</SectionLabel>
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+                Digital D.E.T.O.X.
+              </h2>
+              <p className="text-foreground/70 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                A structured transformation experience built on 5 powerful
+                pillars designed to help you break free from digital distractions
+                and reconnect with your true potential.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="max-w-xl mx-auto mb-14">
-            <ul className="space-y-5">
+            <ul className="space-y-4">
               {detoxBenefits.map((benefit, index) => (
-                <li
-                  key={index}
-                  className="flex items-center gap-4 text-primary-foreground/90 glass-dark rounded-xl px-5 py-4 transition-all duration-300 hover:border-gold/30"
-                >
-                  <CheckCircle className="w-5 h-5 text-gold shrink-0" />
-                  <span className="text-lg font-medium">{benefit}</span>
-                </li>
+                <ScrollReveal key={index} delay={index * 0.08}>
+                  <li className="flex items-center gap-4 text-foreground/90 glass-card rounded-xl px-5 py-4 transition-all duration-300 hover:border-gold/30">
+                    <CheckCircle className="w-5 h-5 text-gold shrink-0" />
+                    <span className="text-lg font-medium">{benefit}</span>
+                  </li>
+                </ScrollReveal>
               ))}
             </ul>
           </div>
 
-          <div className="text-center">
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/services#detox">
-                Join the Next D.E.T.O.X. Event <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
-          </div>
+          <ScrollReveal>
+            <div className="text-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/services#detox">
+                  Join the Next D.E.T.O.X. Event <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-muted">
+      <section className="py-28 bg-muted">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">
-                <Sparkles size={18} />
-                Why Y.A.S.H.?
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                We Don't Believe in One-Size-Fits-All Solutions
-              </h2>
-              <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-                Transformation is personal, and so is our approach. We combine
-                modern psychology, coaching, and leadership training to create
-                lasting impact tailored to your journey.
-              </p>
+              <ScrollReveal direction="left">
+                <SectionLabel>Why Y.A.S.H.?</SectionLabel>
+                <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
+                  We Don't Believe in One-Size-Fits-All Solutions
+                </h2>
+                <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+                  Transformation is personal, and so is our approach. We combine
+                  modern psychology, coaching, and leadership training to create
+                  lasting impact tailored to your journey.
+                </p>
 
-              <ul className="space-y-5">
-                {[
-                  "Science-Backed & Holistic Approach",
-                  "Deep, Lasting Impact Beyond Surface Motivation",
-                  "Customized Programs for Individual Needs",
-                  "A Community for Growth & Excellence",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-4 group">
-                    <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold/20 transition-colors">
-                      <CheckCircle className="w-4 h-4 text-gold" />
-                    </div>
-                    <span className="text-foreground font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-5">
+                  {[
+                    "Science-Backed & Holistic Approach",
+                    "Deep, Lasting Impact Beyond Surface Motivation",
+                    "Customized Programs for Individual Needs",
+                    "A Community for Growth & Excellence",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-4 group">
+                      <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold/20 transition-colors">
+                        <CheckCircle className="w-4 h-4 text-gold" />
+                      </div>
+                      <span className="text-foreground font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              <div className="mt-10">
-                <Button variant="gold" size="lg" asChild>
-                  <Link to="/about">Discover Our Story</Link>
-                </Button>
-              </div>
+                <div className="mt-10">
+                  <Button variant="gold" size="lg" asChild>
+                    <Link to="/about">Discover Our Story</Link>
+                  </Button>
+                </div>
+              </ScrollReveal>
             </div>
 
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-xl relative">
-                <img src={yashSpeaking} alt="Y.A.S.H. speaking at an event" className="w-full h-full object-cover object-[65%_top]" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary via-primary/80 to-transparent pt-16 pb-6 px-6 text-center">
-                  <p className="font-display text-5xl font-bold text-gold mb-2">∞</p>
-                  <p className="font-display text-xl text-primary-foreground font-semibold">Your Potential is Limitless</p>
+            <ScrollReveal direction="right">
+              <div className="relative">
+                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-xl relative">
+                  <img
+                    src={yashSpeaking}
+                    alt="Y.A.S.H. speaking at an event"
+                    className="w-full h-full object-cover object-[65%_top]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent pt-16 pb-6 px-6 text-center">
+                    <p className="font-display text-5xl font-bold text-gold mb-2">
+                      ∞
+                    </p>
+                    <p className="font-display text-xl text-foreground font-semibold">
+                      Your Potential is Limitless
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
+                  <span className="font-display text-4xl font-bold text-background">
+                    ∞
+                  </span>
                 </div>
               </div>
-              <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
-                <Sparkles className="w-12 h-12 text-[hsl(233,51%,10%)]" />
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* CTA Section - Premium urgency-driven */}
-      <section className="py-24 bg-background">
+      {/* CTA Section */}
+      <section className="py-28 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-xl relative overflow-hidden">
-            {/* Decorative gold line at top */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gold-gradient rounded-full" />
-            
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Unleash Your Infinity?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-              Take the first step towards transforming your life. Book a
-              discovery call today and explore how Y.A.S.H. can help you achieve
-              your highest potential.
-            </p>
-            <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
-              ✦ Free 20-minute discovery call • No commitment required ✦
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="gold" size="lg" asChild>
-                <Link to="/contact">Book a Discovery Call</Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/services">View Our Services</Link>
-              </Button>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gold-gradient rounded-full" />
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Ready to Unleash Your Infinity?
+              </h2>
+              <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
+                Take the first step towards transforming your life. Book a
+                discovery call today and explore how Y.A.S.H. can help you
+                achieve your highest potential.
+              </p>
+              <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
+                ✦ Free 20-minute discovery call • No commitment required ✦
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="gold" size="lg" asChild>
+                  <Link to="/contact">Book a Discovery Call</Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/services">View Our Services</Link>
+                </Button>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </Layout>
