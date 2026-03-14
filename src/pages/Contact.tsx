@@ -356,7 +356,7 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-section-gradient">
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gold-gradient rounded-full" />

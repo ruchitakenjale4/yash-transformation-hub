@@ -29,7 +29,7 @@ const testimonials = [
 
 export function SuccessStories() {
   return (
-    <section className="py-24 bg-section-gradient">
+    <section className="py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-flex items-center gap-2 text-gold font-semibold mb-4 tracking-widest uppercase text-sm">

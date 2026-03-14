@@ -137,7 +137,7 @@ export default function Home() {
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center group px-4 md:px-8 lg:px-12">
-                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold-dark mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
+                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
                       <CountUpNumber target={stat.number} />
                     </p>
                     <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">{stat.label}</p>
