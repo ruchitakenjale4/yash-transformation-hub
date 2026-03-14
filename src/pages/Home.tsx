@@ -297,7 +297,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
-                <Sparkles className="w-12 h-12 text-foreground" />
+                <Sparkles className="w-12 h-12 text-[hsl(233,51%,10%)]" />
               </div>
             </div>
           </div>
