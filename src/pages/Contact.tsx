@@ -113,17 +113,21 @@ export default function Contact() {
       />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-hero-gradient text-foreground relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
+      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/10 blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <SectionLabel>Get In Touch</SectionLabel>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <span className="inline-flex items-center gap-2 text-gold-light font-semibold tracking-widest uppercase text-xs mb-4">
+                <span className="w-8 h-px bg-gold-light/60" />
+                Get In Touch
+                <span className="w-8 h-px bg-gold-light/60" />
+              </span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 Start Your{" "}
-                <span className="text-gradient">Transformation Journey</span>
+                <span className="text-gold-light">Transformation Journey</span>
               </h1>
-              <p className="text-foreground/70 text-lg leading-relaxed">
+              <p className="text-primary-foreground/70 text-lg leading-relaxed">
                 Ready to break through your limitations and unleash your infinite
                 potential? Reach out to us and take the first step towards
                 lasting change.
@@ -159,7 +163,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="Your full name"
                         required
-                        className="h-12 rounded-xl bg-card border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
+                        className="h-12 rounded-xl bg-muted border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
                       />
                     </div>
                     <div>
@@ -177,7 +181,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="your@email.com"
                         required
-                        className="h-12 rounded-xl bg-card border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
+                        className="h-12 rounded-xl bg-muted border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
                       />
                     </div>
                   </div>
@@ -197,7 +201,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 98765 43210"
-                        className="h-12 rounded-xl bg-card border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
+                        className="h-12 rounded-xl bg-muted border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
                       />
                     </div>
                     <div>
@@ -214,7 +218,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="How can we help?"
                         required
-                        className="h-12 rounded-xl bg-card border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
+                        className="h-12 rounded-xl bg-muted border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
                       />
                     </div>
                   </div>
@@ -234,7 +238,7 @@ export default function Contact() {
                       placeholder="Tell us about your goals and how we can help you..."
                       required
                       rows={6}
-                      className="resize-none rounded-xl bg-card border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
+                      className="resize-none rounded-xl bg-muted border-border focus:border-gold text-foreground placeholder:text-muted-foreground transition-colors"
                     />
                   </div>
 
@@ -314,7 +318,7 @@ export default function Contact() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`w-12 h-12 rounded-xl bg-card flex items-center justify-center text-muted-foreground transition-all duration-300 hover:scale-105 border border-border ${social.color}`}
+                        className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center text-muted-foreground transition-all duration-300 hover:scale-105 border border-border ${social.color}`}
                         aria-label={social.label}
                       >
                         <social.icon size={20} />
@@ -324,16 +328,16 @@ export default function Contact() {
                 </div>
 
                 {/* YouTube Section */}
-                <div className="p-6 bg-hero-gradient rounded-2xl text-foreground relative overflow-hidden border border-border">
+                <div className="p-6 bg-hero-gradient rounded-2xl text-primary-foreground relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-gold/10 blur-2xl" />
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-4">
-                      <Youtube className="w-8 h-8 text-gold" />
-                      <h3 className="font-display text-lg font-semibold tracking-wider">
+                      <Youtube className="w-8 h-8 text-gold-light" />
+                      <h3 className="font-display text-lg font-semibold tracking-wider text-primary-foreground">
                         Watch on YouTube
                       </h3>
                     </div>
-                    <p className="text-foreground/70 text-sm mb-4 leading-relaxed">
+                    <p className="text-primary-foreground/70 text-sm mb-4 leading-relaxed">
                       Subscribe to our channel for free insights, transformation
                       tips, and behind-the-scenes content from our events.
                     </p>
@@ -358,7 +362,7 @@ export default function Contact() {
       <section className="py-28 bg-muted">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-xl relative overflow-hidden">
+            <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gold-gradient rounded-full" />
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Book a Free Discovery Call

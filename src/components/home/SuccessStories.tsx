@@ -48,7 +48,7 @@ export function SuccessStories() {
         <div className="grid md:grid-cols-3 gap-8 mb-14">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={index} delay={index * 0.12}>
-              <div className="glass-card rounded-2xl p-8 hover:shadow-xl transition-all duration-500 relative group hover:-translate-y-1 h-full flex flex-col">
+              <div className="glass-card rounded-2xl p-8 hover:shadow-md transition-all duration-500 relative group hover:-translate-y-1 h-full flex flex-col">
                 {/* Header with photo and name */}
                 <div className="flex items-center gap-4 mb-6">
                   <img
@@ -60,11 +60,11 @@ export function SuccessStories() {
                     <p className="font-semibold text-foreground text-sm tracking-wide">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-gold/80">{testimonial.role}</p>
+                    <p className="text-sm text-gold">{testimonial.role}</p>
                   </div>
                 </div>
                 <Quote className="w-8 h-8 text-gold/20 mb-3" />
-                <p className="text-foreground/80 leading-relaxed text-sm flex-1">
+                <p className="text-foreground/70 leading-relaxed text-sm flex-1">
                   "{testimonial.content}"
                 </p>
               </div>
@@ -75,7 +75,7 @@ export function SuccessStories() {
         {/* Video Testimonial */}
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">
-            <div className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-500">
+            <div className="glass-card rounded-2xl p-6 hover:shadow-md transition-all duration-500">
               <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">
                 Client Video Testimonial
               </h3>

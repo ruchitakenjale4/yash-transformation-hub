@@ -85,7 +85,7 @@ export function GoogleReviews() {
                   key={index}
                   className="md:basis-1/2 lg:basis-1/2"
                 >
-                  <div className="glass-card p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-500 h-full group hover:-translate-y-1">
+                  <div className="glass-card p-6 rounded-2xl hover:shadow-md transition-all duration-500 h-full group hover:-translate-y-1">
                     <div className="flex items-center gap-1 mb-3">
                       {[...Array(review.rating)].map((_, i) => (
                         <Star
@@ -94,7 +94,7 @@ export function GoogleReviews() {
                         />
                       ))}
                     </div>
-                    <p className="text-foreground/90 mb-4 text-sm leading-relaxed">
+                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
                       "{review.text}"
                     </p>
                     <div className="premium-divider mb-3" />
@@ -117,8 +117,8 @@ export function GoogleReviews() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="border-border bg-card text-foreground hover:bg-muted" />
-            <CarouselNext className="border-border bg-card text-foreground hover:bg-muted" />
+            <CarouselPrevious className="border-border bg-background text-foreground hover:bg-muted" />
+            <CarouselNext className="border-border bg-background text-foreground hover:bg-muted" />
           </Carousel>
         </div>
 
