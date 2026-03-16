@@ -77,7 +77,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-right scale-105"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/30" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
@@ -92,7 +92,7 @@ export default function Home() {
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-base md:text-lg text-foreground/80 mb-10 max-w-xl font-medium leading-relaxed">
+              <p className="text-base md:text-lg text-foreground/70 mb-10 max-w-xl font-medium leading-relaxed">
                 Break through limitations, achieve self-mastery, and unlock your
                 highest potential through holistic personal development and
                 transformational coaching.
@@ -100,12 +100,12 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="xl" asChild>
+                <Button variant="gold" size="xl" asChild>
                   <Link to="/services">
                     Explore Services <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
-                <Button variant="heroOutline" size="xl" asChild>
+                <Button variant="outline" size="xl" asChild>
                   <Link to="/about">Learn More</Link>
                 </Button>
               </div>
@@ -113,18 +113,18 @@ export default function Home() {
             {/* Social proof */}
             <ScrollReveal delay={0.4}>
               <div className="mt-10">
-                <div className="inline-flex items-center gap-3 glass-dark rounded-full px-5 py-2.5">
+                <div className="inline-flex items-center gap-3 glass-card rounded-full px-5 py-2.5">
                   <div className="flex -space-x-2">
                     {[...Array(4)].map((_, i) => (
                       <div
                         key={i}
-                        className="w-8 h-8 rounded-full bg-gold/20 border-2 border-foreground/10 flex items-center justify-center"
+                        className="w-8 h-8 rounded-full bg-gold/15 border-2 border-background flex items-center justify-center"
                       >
                         <Users className="w-3.5 h-3.5 text-gold" />
                       </div>
                     ))}
                   </div>
-                  <span className="text-foreground/70 text-sm font-medium">
+                  <span className="text-foreground/60 text-sm font-medium">
                     Join <strong className="text-gold">1000+</strong> who
                     transformed their lives
                   </span>
@@ -146,14 +146,14 @@ export default function Home() {
       <section className="py-0 relative z-20">
         <div className="container mx-auto px-4">
           <div className="-mt-12">
-            <div className="glass-card rounded-2xl shadow-lg p-8 md:p-10">
+            <div className="bg-background rounded-2xl shadow-lg border border-border p-8 md:p-10">
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
                     className="text-center group px-4 md:px-8 lg:px-12"
                   >
-                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 stat-glow transition-transform duration-300 group-hover:scale-105">
+                    <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 transition-transform duration-300 group-hover:scale-105">
                       <CountUpNumber target={stat.number} />
                     </p>
                     <p className="text-muted-foreground text-xs font-medium tracking-wider uppercase">
@@ -176,7 +176,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutBg})` }}
         />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-background/90" />
         <div className="relative z-10 container mx-auto px-4">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-16">
@@ -184,7 +184,7 @@ export default function Home() {
               <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
                 True Transformation is Not a Luxury—It's Essential
               </h2>
-              <p className="text-foreground/70 text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 At Y.A.S.H., we believe in breaking patterns of stress,
                 self-doubt, and stagnation. We empower individuals to take charge
                 of their lives through holistic well-being, strategic growth, and
@@ -196,7 +196,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="group p-6 glass-card rounded-2xl hover:border-gold/40 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
+                <div className="group p-6 glass-card rounded-2xl hover:border-gold/40 hover:shadow-md transition-all duration-500 hover:-translate-y-1 h-full">
                   <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-all duration-300 group-hover:scale-110">
                     <feature.icon className="w-7 h-7 text-gold" />
                   </div>
@@ -217,18 +217,22 @@ export default function Home() {
       <GoogleReviews />
 
       {/* D.E.T.O.X. Framework Section */}
-      <section className="py-28 bg-hero-gradient text-foreground relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-teal/8 blur-3xl" />
+      <section className="py-28 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="text-center mb-14">
-              <SectionLabel>Signature Event</SectionLabel>
-              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+              <span className="inline-flex items-center gap-2 text-gold-light font-semibold tracking-widest uppercase text-xs mb-4">
+                <span className="w-8 h-px bg-gold-light/60" />
+                Signature Event
+                <span className="w-8 h-px bg-gold-light/60" />
+              </span>
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 text-primary-foreground">
                 Digital D.E.T.O.X.
               </h2>
-              <p className="text-foreground/70 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+              <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
                 A structured transformation experience built on 5 powerful
                 pillars designed to help you break free from digital distractions
                 and reconnect with your true potential.
@@ -240,8 +244,8 @@ export default function Home() {
             <ul className="space-y-4">
               {detoxBenefits.map((benefit, index) => (
                 <ScrollReveal key={index} delay={index * 0.08}>
-                  <li className="flex items-center gap-4 text-foreground/90 glass-card rounded-xl px-5 py-4 transition-all duration-300 hover:border-gold/30">
-                    <CheckCircle className="w-5 h-5 text-gold shrink-0" />
+                  <li className="flex items-center gap-4 text-primary-foreground/90 glass-dark rounded-xl px-5 py-4 transition-all duration-300 hover:border-gold/30">
+                    <CheckCircle className="w-5 h-5 text-gold-light shrink-0" />
                     <span className="text-lg font-medium">{benefit}</span>
                   </li>
                 </ScrollReveal>
@@ -303,23 +307,23 @@ export default function Home() {
 
             <ScrollReveal direction="right">
               <div className="relative">
-                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-xl relative">
+                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-lg relative">
                   <img
                     src={yashSpeaking}
                     alt="Y.A.S.H. speaking at an event"
                     className="w-full h-full object-cover object-[65%_top]"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent pt-16 pb-6 px-6 text-center">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/90 via-foreground/60 to-transparent pt-16 pb-6 px-6 text-center">
                     <p className="font-display text-5xl font-bold text-gold mb-2">
                       ∞
                     </p>
-                    <p className="font-display text-xl text-foreground font-semibold">
+                    <p className="font-display text-xl text-primary-foreground font-semibold">
                       Your Potential is Limitless
                     </p>
                   </div>
                 </div>
                 <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
-                  <span className="font-display text-4xl font-bold text-background">
+                  <span className="font-display text-4xl font-bold text-primary-foreground">
                     ∞
                   </span>
                 </div>
@@ -333,7 +337,7 @@ export default function Home() {
       <section className="py-28 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-xl relative overflow-hidden">
+            <div className="max-w-3xl mx-auto text-center glass-card rounded-3xl p-14 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gold-gradient rounded-full" />
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Ready to Unleash Your Infinity?

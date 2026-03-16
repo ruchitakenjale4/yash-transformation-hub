@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logoLight from "@/assets/logo-light.png";
+import logoDark from "@/assets/logo-dark.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -28,7 +28,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-lg"
+          ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-sm"
           : "bg-transparent"
       )}
     >
@@ -37,7 +37,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src={logoLight}
+              src={logoDark}
               alt="Y.A.S.H. Logo"
               className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -91,7 +91,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-6 border-t border-border/30 animate-fade-in bg-background/95 backdrop-blur-xl">
+          <div className="md:hidden py-6 border-t border-border/50 animate-fade-in bg-background/95 backdrop-blur-xl">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link

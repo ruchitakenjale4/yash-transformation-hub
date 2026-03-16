@@ -7,7 +7,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
-import logoLight from "@/assets/logo-light.png";
+import logoDark from "@/assets/logo-dark.png";
 
 const footerLinks = {
   navigation: [
@@ -43,8 +43,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-card text-foreground relative overflow-hidden border-t border-border/50">
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/3 blur-3xl" />
+    <footer className="bg-muted text-foreground relative overflow-hidden border-t border-border">
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -52,7 +52,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6 group">
               <img
-                src={logoLight}
+                src={logoDark}
                 alt="Y.A.S.H. Logo"
                 className="w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
               />
@@ -76,7 +76,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-xl bg-muted flex items-center justify-center hover:bg-gold hover:scale-105 transition-all duration-300 border border-border"
+                  className="w-11 h-11 rounded-xl bg-background flex items-center justify-center hover:bg-gold hover:text-primary-foreground hover:scale-105 transition-all duration-300 border border-border"
                   aria-label={social.label}
                 >
                   <social.icon size={18} className="text-foreground" />
@@ -130,7 +130,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 group">
-                <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors border border-border">
+                <div className="w-9 h-9 rounded-lg bg-background flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors border border-border">
                   <Mail size={16} className="text-gold" />
                 </div>
                 <a
@@ -141,7 +141,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors border border-border">
+                <div className="w-9 h-9 rounded-lg bg-background flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors border border-border">
                   <Phone size={16} className="text-gold" />
                 </div>
                 <a
@@ -152,7 +152,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors border border-border">
+                <div className="w-9 h-9 rounded-lg bg-background flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors border border-border">
                   <MapPin size={16} className="text-gold" />
                 </div>
                 <a
@@ -169,7 +169,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border/50">
+        <div className="mt-16 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} Y.A.S.H. All rights reserved.

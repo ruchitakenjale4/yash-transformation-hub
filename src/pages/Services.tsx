@@ -108,23 +108,27 @@ export default function Services() {
       />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-hero-gradient text-foreground relative overflow-hidden">
+      <section className="pt-12 pb-20 bg-hero-gradient text-primary-foreground relative overflow-hidden">
         <img
           src={servicesHeroBg}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-background/60" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
+        <div className="absolute inset-0 bg-primary/40" />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/10 blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <SectionLabel>Our Services</SectionLabel>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <span className="inline-flex items-center gap-2 text-gold-light font-semibold tracking-widest uppercase text-xs mb-4">
+                <span className="w-8 h-px bg-gold-light/60" />
+                Our Services
+                <span className="w-8 h-px bg-gold-light/60" />
+              </span>
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 Transform Your Life with{" "}
-                <span className="text-gradient">Expert Guidance</span>
+                <span className="text-gold-light">Expert Guidance</span>
               </h1>
-              <p className="text-foreground/70 text-lg leading-relaxed">
+              <p className="text-primary-foreground/70 text-lg leading-relaxed">
                 We offer a range of high-impact coaching, training, and
                 transformation programs designed to create lasting breakthroughs.
               </p>
@@ -134,7 +138,7 @@ export default function Services() {
       </section>
 
       {/* Expertise Overview */}
-      <section className="py-16 bg-muted border-b border-border/50">
+      <section className="py-16 bg-muted border-b border-border">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {expertise.map((item, index) => (
@@ -163,7 +167,7 @@ export default function Services() {
           <section
             key={service.id}
             id={service.id}
-            className={`py-24 ${isDark ? "bg-hero-gradient" : "bg-background"}`}
+            className={`py-24 ${isDark ? "bg-hero-gradient text-primary-foreground" : "bg-background"}`}
           >
             <div className="container mx-auto px-4">
               <ScrollReveal>
@@ -171,30 +175,30 @@ export default function Services() {
                   <div className="flex items-center gap-4 mb-6">
                     <div
                       className={`w-14 h-14 rounded-xl flex items-center justify-center ${
-                        isDark ? "bg-foreground/10" : "bg-gold/10"
+                        isDark ? "bg-primary-foreground/10" : "bg-gold/10"
                       }`}
                     >
-                      <service.icon className="w-7 h-7 text-gold" />
+                      <service.icon className={`w-7 h-7 ${isDark ? "text-gold-light" : "text-gold"}`} />
                     </div>
                     <div>
-                      <span className="font-medium text-sm text-gold">
+                      <span className={`font-medium text-sm ${isDark ? "text-gold-light" : "text-gold"}`}>
                         {service.subtitle}
                       </span>
-                      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                      <h2 className={`font-display text-3xl md:text-4xl font-bold ${isDark ? "text-primary-foreground" : "text-foreground"}`}>
                         {service.title}
                       </h2>
                     </div>
                   </div>
 
-                  <p className="text-lg leading-relaxed mb-8 text-foreground/70">
+                  <p className={`text-lg leading-relaxed mb-8 ${isDark ? "text-primary-foreground/70" : "text-foreground/70"}`}>
                     {service.description}
                   </p>
 
                   <ul className="grid sm:grid-cols-2 gap-3 mb-10">
                     {service.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start gap-2.5">
-                        <CheckCircle className="w-5 h-5 shrink-0 mt-0.5 text-gold" />
-                        <span className="text-sm text-foreground/85">
+                        <CheckCircle className={`w-5 h-5 shrink-0 mt-0.5 ${isDark ? "text-gold-light" : "text-gold"}`} />
+                        <span className={`text-sm ${isDark ? "text-primary-foreground/85" : "text-foreground/85"}`}>
                           {feature}
                         </span>
                       </li>
@@ -264,8 +268,8 @@ export default function Services() {
             ].map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="relative text-center group">
-                  <div className="w-16 h-16 rounded-full bg-hero-gradient flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md border border-border">
-                    <span className="font-display text-xl font-bold text-gold">
+                  <div className="w-16 h-16 rounded-full bg-hero-gradient flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    <span className="font-display text-xl font-bold text-gold-light">
                       {item.step}
                     </span>
                   </div>
@@ -286,19 +290,19 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-hero-gradient text-foreground relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-teal/8 blur-3xl" />
+      <section className="py-28 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
                 Ready to Start Your Transformation?
               </h2>
-              <p className="text-foreground/70 text-lg mb-4 leading-relaxed">
+              <p className="text-primary-foreground/70 text-lg mb-4 leading-relaxed">
                 Book a free discovery call to discuss your goals and explore how
                 our services can help you achieve lasting breakthroughs.
               </p>
-              <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
+              <p className="text-gold-light font-semibold text-sm mb-8 tracking-wide">
                 ✦ Free consultation • Personalized approach • Lasting results ✦
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

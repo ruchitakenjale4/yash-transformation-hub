@@ -166,7 +166,7 @@ export default function About() {
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/80" />
+          <div className="absolute inset-0 bg-background/85" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
@@ -176,14 +176,14 @@ export default function About() {
                 Empowering You to{" "}
                 <span className="text-gradient">Unleash the Infinity</span>
               </h1>
-              <p className="text-foreground/75 text-lg leading-relaxed mb-6">
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                 At Yugandhar Academic Services for Harmony (Y.A.S.H.), we
                 believe that true transformation is not a luxury—it is
                 essential. In today's fast-paced world, individuals and
                 organizations often find themselves stuck in cycles of stress,
                 self-doubt, and stagnation.
               </p>
-              <p className="text-foreground/75 text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 Y.A.S.H. exists to break those patterns, empower individuals to
                 take charge of their lives, and help them unlock their highest
                 potential.
@@ -198,16 +198,16 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0}>
-              <div className="p-8 rounded-3xl bg-hero-gradient text-foreground relative overflow-hidden h-full border border-border/50">
+              <div className="p-8 rounded-3xl bg-hero-gradient text-primary-foreground relative overflow-hidden h-full">
                 <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-gold/10 blur-2xl" />
                 <div className="relative z-10">
                   <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mb-6">
-                    <Eye className="w-7 h-7 text-gold" />
+                    <Eye className="w-7 h-7 text-gold-light" />
                   </div>
-                  <h2 className="font-display text-2xl font-bold mb-4 tracking-wider">
+                  <h2 className="font-display text-2xl font-bold mb-4 tracking-wider text-primary-foreground">
                     Our Vision
                   </h2>
-                  <p className="text-foreground/80 leading-relaxed">
+                  <p className="text-primary-foreground/80 leading-relaxed">
                     To establish health in every aspect of life and see
                     individuals operating at their highest potential—not just in
                     their careers, but in their overall well-being and personal
@@ -257,7 +257,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {expertise.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.08}>
-                <div className="p-6 glass-card rounded-2xl hover:shadow-lg transition-all duration-500 group hover:-translate-y-1 h-full">
+                <div className="p-6 glass-card rounded-2xl hover:shadow-md transition-all duration-500 group hover:-translate-y-1 h-full">
                   <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                     <item.icon className="w-6 h-6 text-gold" />
                   </div>
@@ -293,7 +293,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="p-6 glass-card rounded-2xl hover:shadow-lg hover:border-gold/30 transition-all duration-500 text-center group hover:-translate-y-1 h-full">
+                <div className="p-6 glass-card rounded-2xl hover:shadow-md hover:border-gold/30 transition-all duration-500 text-center group hover:-translate-y-1 h-full">
                   <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                     <value.icon className="w-7 h-7 text-gold" />
                   </div>
@@ -369,28 +369,28 @@ export default function About() {
             <ScrollReveal direction="right">
               <div className="order-1 lg:order-2">
                 <div className="relative">
-                  <div className="aspect-[4/5] rounded-2xl bg-hero-gradient overflow-hidden border border-border/50">
+                  <div className="aspect-[4/5] rounded-2xl bg-muted overflow-hidden border border-border shadow-lg">
                     <img
                       src={drYashPhoto}
                       alt="Dr. Yash Rajesh Kenjale - Founder of Y.A.S.H."
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-8 py-4 bg-hero-gradient rounded-xl shadow-lg text-foreground flex items-center gap-6 border border-border/50">
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-8 py-4 bg-hero-gradient rounded-xl shadow-lg text-primary-foreground flex items-center gap-6">
                     <div className="text-center">
-                      <p className="font-display font-bold text-4xl text-gold">
+                      <p className="font-display font-bold text-4xl text-gold-light">
                         1000+
                       </p>
-                      <p className="text-foreground/80 text-sm font-semibold">
+                      <p className="text-primary-foreground/80 text-sm font-semibold">
                         Lives Transformed
                       </p>
                     </div>
-                    <div className="w-px h-12 bg-foreground/20"></div>
+                    <div className="w-px h-12 bg-primary-foreground/20"></div>
                     <div className="text-center">
-                      <p className="font-display font-bold text-4xl text-gold">
+                      <p className="font-display font-bold text-4xl text-gold-light">
                         21k+
                       </p>
-                      <p className="text-foreground/80 text-sm font-semibold">
+                      <p className="text-primary-foreground/80 text-sm font-semibold">
                         YouTube Views
                       </p>
                     </div>
@@ -464,17 +464,17 @@ export default function About() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.15}>
-                <div className="p-6 bg-hero-gradient rounded-xl text-foreground h-full border border-border/50">
-                  <h3 className="font-display text-xl font-semibold mb-4">
+                <div className="p-6 bg-hero-gradient rounded-xl text-primary-foreground h-full">
+                  <h3 className="font-display text-xl font-semibold mb-4 text-primary-foreground">
                     Why Work with Dr. Yash?
                   </h3>
                   <ul className="space-y-4">
                     {whyDrYash.map((item, index) => (
                       <li key={index}>
-                        <p className="font-semibold text-gold text-sm">
+                        <p className="font-semibold text-gold-light text-sm">
                           {item.title}
                         </p>
-                        <p className="text-foreground/75 text-sm">
+                        <p className="text-primary-foreground/75 text-sm">
                           {item.description}
                         </p>
                       </li>
@@ -514,7 +514,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-6">
             {whoWeServe.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="flex gap-4 p-6 glass-card rounded-xl hover:shadow-lg hover:border-gold/30 transition-all h-full">
+                <div className="flex gap-4 p-6 glass-card rounded-xl hover:shadow-md hover:border-gold/30 transition-all h-full">
                   <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
                     <item.icon className="w-7 h-7 text-gold" />
                   </div>
@@ -534,20 +534,20 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-hero-gradient text-foreground relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-teal/8 blur-3xl" />
+      <section className="py-28 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
                 It's Time to Break Barriers & Rewrite Your Story
               </h2>
-              <p className="text-foreground/70 text-lg mb-4 leading-relaxed">
+              <p className="text-primary-foreground/70 text-lg mb-4 leading-relaxed">
                 At Y.A.S.H., we don't just inspire change—we create it. Ready
                 to break through your limitations, tap into your potential, and
                 lead a life of purpose, confidence, and fulfillment?
               </p>
-              <p className="text-gold font-semibold text-sm mb-8 tracking-wide">
+              <p className="text-gold-light font-semibold text-sm mb-8 tracking-wide">
                 ✦ 1000+ lives transformed • Science-backed approach ✦
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
