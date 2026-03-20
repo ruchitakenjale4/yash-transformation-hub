@@ -77,7 +77,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-right scale-105"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
@@ -146,7 +146,7 @@ export default function Home() {
       <section className="py-0 relative z-20">
         <div className="container mx-auto px-4">
           <div className="-mt-12">
-            <div className="bg-background rounded-2xl shadow-lg border border-border p-8 md:p-10">
+            <div className="bg-background rounded-2xl shadow-lg border border-border/80 p-8 md:p-10">
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
                   <div
@@ -323,7 +323,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
-                  <span className="font-display text-4xl font-bold text-primary-foreground">
+                  <span className="font-display text-4xl font-bold text-[hsl(230,30%,12%)]">
                     ∞
                   </span>
                 </div>

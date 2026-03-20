@@ -15,9 +15,9 @@ const buttonVariants = cva(
         secondary: "rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
         ghost: "rounded-lg hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "rounded-2xl bg-gold-gradient text-primary-foreground font-bold tracking-wider shadow-gold hover:shadow-[0_8px_40px_hsl(42_60%_48%/0.35)] hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_100%/0.25)_37%,transparent_63%)] before:bg-[length:200%_100%] hover:before:animate-[shimmer_1.5s_ease-in-out]",
-        hero: "rounded-2xl bg-gold-gradient text-primary-foreground font-bold tracking-wider shadow-gold hover:shadow-[0_8px_40px_hsl(42_60%_48%/0.35)] hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_100%/0.25)_37%,transparent_63%)] before:bg-[length:200%_100%] hover:before:animate-[shimmer_1.5s_ease-in-out]",
-        heroOutline: "rounded-2xl border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 hover:border-primary-foreground/50 font-bold tracking-wider",
+        gold: "rounded-2xl bg-gold-gradient text-[hsl(230,30%,12%)] font-bold tracking-wider shadow-gold hover:shadow-[0_8px_40px_hsl(42_60%_48%/0.35)] hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_100%/0.25)_37%,transparent_63%)] before:bg-[length:200%_100%] hover:before:animate-[shimmer_1.5s_ease-in-out]",
+        hero: "rounded-2xl bg-gold-gradient text-[hsl(230,30%,12%)] font-bold tracking-wider shadow-gold hover:shadow-[0_8px_40px_hsl(42_60%_48%/0.35)] hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden before:absolute before:inset-0 before:bg-[linear-gradient(110deg,transparent_25%,hsl(0_0%_100%/0.25)_37%,transparent_63%)] before:bg-[length:200%_100%] hover:before:animate-[shimmer_1.5s_ease-in-out]",
+        heroOutline: "rounded-2xl border-2 border-primary-foreground/40 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 hover:border-primary-foreground/60 font-bold tracking-wider",
       },
       size: {
         default: "h-11 px-6 py-2",
