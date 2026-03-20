@@ -146,7 +146,7 @@ export default function Home() {
       <section className="py-0 relative z-20">
         <div className="container mx-auto px-4">
           <div className="-mt-12">
-            <div className="bg-background rounded-2xl shadow-lg border border-border p-8 md:p-10">
+            <div className="bg-background rounded-2xl shadow-lg border border-border/80 p-8 md:p-10">
               <div className="flex flex-nowrap justify-center divide-x divide-dotted divide-border">
                 {stats.map((stat, index) => (
                   <div
