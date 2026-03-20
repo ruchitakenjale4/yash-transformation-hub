@@ -77,7 +77,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-right scale-105"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
