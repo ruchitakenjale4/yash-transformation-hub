@@ -323,7 +323,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gold-gradient rounded-2xl flex items-center justify-center shadow-gold animate-float">
-                  <span className="font-display text-4xl font-bold text-primary-foreground">
+                  <span className="font-display text-4xl font-bold text-[hsl(230,30%,12%)]">
                     ∞
                   </span>
                 </div>
