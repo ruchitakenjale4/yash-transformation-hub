@@ -117,7 +117,7 @@ export default function Home() {
                     Book Free 20-Min Call <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="xl" asChild>
+                <Button variant="heroOutline" size="xl" asChild>
                   <Link to="/services#detox">
                     Explore D.E.T.O.X. Program
                   </Link>
