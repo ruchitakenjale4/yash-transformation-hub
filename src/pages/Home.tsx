@@ -21,7 +21,7 @@ import { SectionLabel } from "@/components/SectionLabel";
 import { PainPoints } from "@/components/home/PainPoints";
 import { MidPageCTA } from "@/components/home/MidPageCTA";
 import { StickyCTA } from "@/components/home/StickyCTA";
-import heroBg from "@/assets/hero-bg.jpg";
+import yashHero from "@/assets/yash-hero.png";
 import yashSpeaking from "@/assets/yash-speaking.jpg";
 
 const stats = [
