@@ -78,34 +78,34 @@ export default function Home() {
       />
 
       {/* Hero Section — Problem-focused, urgency-driven */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-hero-gradient">
         <div
-          className="absolute inset-0 bg-cover bg-right scale-105"
+          className="absolute inset-0 bg-cover bg-right scale-105 opacity-30"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(230,30%,8%)] via-[hsl(230,30%,8%)]/90 to-transparent" />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-foreground/70 text-xs font-semibold tracking-wide">
+                <span className="text-primary-foreground/70 text-xs font-semibold tracking-wide">
                   Now accepting new clients for July 2026
                 </span>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[0.95]">
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-[0.95]">
                 Unleash the <span className="text-gradient">Infinity</span>
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-lg md:text-xl text-foreground/70 mb-4 max-w-xl font-medium leading-relaxed">
+              <p className="text-lg md:text-xl text-primary-foreground/70 mb-4 max-w-xl font-medium leading-relaxed">
                 Tired of self-doubt, stress, and stagnation?
               </p>
-              <p className="text-base text-foreground/60 mb-8 max-w-xl leading-relaxed">
-                Dr. Yash's science-backed coaching has helped <strong className="text-foreground">1000+ professionals</strong> break
+              <p className="text-base text-primary-foreground/60 mb-8 max-w-xl leading-relaxed">
+                Dr. Yash's science-backed coaching has helped <strong className="text-primary-foreground">1000+ professionals</strong> break
                 through mental barriers, build emotional resilience, and achieve
                 peak performance — in just 90 days.
               </p>
@@ -123,7 +123,7 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
-              <p className="text-muted-foreground text-xs font-medium">
+              <p className="text-primary-foreground/50 text-xs font-medium">
                 ✦ No commitment required • 100% free • Results guaranteed ✦
               </p>
             </ScrollReveal>
@@ -131,31 +131,31 @@ export default function Home() {
             {/* Trust badges */}
             <ScrollReveal delay={0.4}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <div className="inline-flex items-center gap-2 glass-card rounded-full px-4 py-2">
+                <div className="inline-flex items-center gap-2 glass-dark rounded-full px-4 py-2">
                   <div className="flex -space-x-2">
                     {[...Array(4)].map((_, i) => (
                       <div
                         key={i}
-                        className="w-7 h-7 rounded-full bg-gold/15 border-2 border-background flex items-center justify-center"
+                        className="w-7 h-7 rounded-full bg-gold/15 border-2 border-[hsl(230,30%,12%)] flex items-center justify-center"
                       >
                         <Users className="w-3 h-3 text-gold" />
                       </div>
                     ))}
                   </div>
-                  <span className="text-foreground/60 text-xs font-medium">
+                  <span className="text-primary-foreground/60 text-xs font-medium">
                     <strong className="text-gold">1000+</strong> transformed
                   </span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 glass-card rounded-full px-4 py-2">
+                <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
                   <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-                  <span className="text-foreground/60 text-xs font-medium">
-                    <strong className="text-foreground">5.0</strong> Google Rating
+                  <span className="text-primary-foreground/60 text-xs font-medium">
+                    <strong className="text-primary-foreground">5.0</strong> Google Rating
                   </span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 glass-card rounded-full px-4 py-2">
+                <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
                   <Shield className="w-3.5 h-3.5 text-gold" />
-                  <span className="text-foreground/60 text-xs font-medium">
-                    <strong className="text-foreground">10+</strong> Years Expert
+                  <span className="text-primary-foreground/60 text-xs font-medium">
+                    <strong className="text-primary-foreground">10+</strong> Years Expert
                   </span>
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-primary-foreground/20 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-gold rounded-full animate-pulse-slow" />
           </div>
         </div>
