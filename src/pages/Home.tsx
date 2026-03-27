@@ -96,16 +96,16 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[0.95]">
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-[0.95]">
                 Unleash the <span className="text-gradient">Infinity</span>
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-lg md:text-xl text-foreground/70 mb-4 max-w-xl font-medium leading-relaxed">
+              <p className="text-lg md:text-xl text-primary-foreground/70 mb-4 max-w-xl font-medium leading-relaxed">
                 Tired of self-doubt, stress, and stagnation?
               </p>
-              <p className="text-base text-foreground/60 mb-8 max-w-xl leading-relaxed">
-                Dr. Yash's science-backed coaching has helped <strong className="text-foreground">1000+ professionals</strong> break
+              <p className="text-base text-primary-foreground/60 mb-8 max-w-xl leading-relaxed">
+                Dr. Yash's science-backed coaching has helped <strong className="text-primary-foreground">1000+ professionals</strong> break
                 through mental barriers, build emotional resilience, and achieve
                 peak performance — in just 90 days.
               </p>
