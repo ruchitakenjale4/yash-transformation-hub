@@ -123,7 +123,7 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
-              <p className="text-muted-foreground text-xs font-medium">
+              <p className="text-primary-foreground/50 text-xs font-medium">
                 ✦ No commitment required • 100% free • Results guaranteed ✦
               </p>
             </ScrollReveal>
@@ -131,31 +131,31 @@ export default function Home() {
             {/* Trust badges */}
             <ScrollReveal delay={0.4}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <div className="inline-flex items-center gap-2 glass-card rounded-full px-4 py-2">
+                <div className="inline-flex items-center gap-2 glass-dark rounded-full px-4 py-2">
                   <div className="flex -space-x-2">
                     {[...Array(4)].map((_, i) => (
                       <div
                         key={i}
-                        className="w-7 h-7 rounded-full bg-gold/15 border-2 border-background flex items-center justify-center"
+                        className="w-7 h-7 rounded-full bg-gold/15 border-2 border-[hsl(230,30%,12%)] flex items-center justify-center"
                       >
                         <Users className="w-3 h-3 text-gold" />
                       </div>
                     ))}
                   </div>
-                  <span className="text-foreground/60 text-xs font-medium">
+                  <span className="text-primary-foreground/60 text-xs font-medium">
                     <strong className="text-gold">1000+</strong> transformed
                   </span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 glass-card rounded-full px-4 py-2">
+                <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
                   <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-                  <span className="text-foreground/60 text-xs font-medium">
-                    <strong className="text-foreground">5.0</strong> Google Rating
+                  <span className="text-primary-foreground/60 text-xs font-medium">
+                    <strong className="text-primary-foreground">5.0</strong> Google Rating
                   </span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 glass-card rounded-full px-4 py-2">
+                <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
                   <Shield className="w-3.5 h-3.5 text-gold" />
-                  <span className="text-foreground/60 text-xs font-medium">
-                    <strong className="text-foreground">10+</strong> Years Expert
+                  <span className="text-primary-foreground/60 text-xs font-medium">
+                    <strong className="text-primary-foreground">10+</strong> Years Expert
                   </span>
                 </div>
               </div>
