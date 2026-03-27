@@ -79,85 +79,98 @@ export default function Home() {
 
       {/* Hero Section — Problem-focused, urgency-driven */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-hero-gradient">
-        <div
-          className="absolute inset-0 bg-cover bg-right scale-105 opacity-30"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(230,30%,8%)] via-[hsl(230,30%,8%)]/90 to-transparent" />
+        {/* Subtle ambient glow effects */}
+        <div className="absolute top-1/4 left-0 w-96 h-96 rounded-full bg-gold/5 blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full bg-teal/5 blur-[100px]" />
 
         <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-2xl">
-            <ScrollReveal>
-              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-primary-foreground/70 text-xs font-semibold tracking-wide">
-                  Now accepting new clients for July 2026
-                </span>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-[0.95]">
-                Unleash the <span className="text-gradient">Infinity</span>
-              </h1>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-lg md:text-xl text-primary-foreground/70 mb-4 max-w-xl font-medium leading-relaxed">
-                Tired of self-doubt, stress, and stagnation?
-              </p>
-              <p className="text-base text-primary-foreground/60 mb-8 max-w-xl leading-relaxed">
-                Dr. Yash's science-backed coaching has helped <strong className="text-primary-foreground">1000+ professionals</strong> break
-                through mental barriers, build emotional resilience, and achieve
-                peak performance — in just 90 days.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.3}>
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                <Button variant="gold" size="xl" asChild>
-                  <Link to="/contact">
-                    Book Free 20-Min Call <ArrowRight className="ml-2" />
-                  </Link>
-                </Button>
-                <Button variant="heroOutline" size="xl" asChild>
-                  <Link to="/services#detox">
-                    Explore D.E.T.O.X. Program
-                  </Link>
-                </Button>
-              </div>
-              <p className="text-primary-foreground/50 text-xs font-medium">
-                ✦ No commitment required • 100% free • Results guaranteed ✦
-              </p>
-            </ScrollReveal>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Text content */}
+            <div>
+              <ScrollReveal>
+                <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-primary-foreground/70 text-xs font-semibold tracking-wide">
+                    Now accepting new clients for July 2026
+                  </span>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-[0.95]">
+                  Unleash the <span className="text-gradient">Infinity</span>
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <p className="text-lg md:text-xl text-primary-foreground/70 mb-4 max-w-xl font-medium leading-relaxed">
+                  Tired of self-doubt, stress, and stagnation?
+                </p>
+                <p className="text-base text-primary-foreground/60 mb-8 max-w-xl leading-relaxed">
+                  Dr. Yash's science-backed coaching has helped <strong className="text-primary-foreground">1000+ professionals</strong> break
+                  through mental barriers, build emotional resilience, and achieve
+                  peak performance — in just 90 days.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.3}>
+                <div className="flex flex-col sm:flex-row gap-4 mb-4">
+                  <Button variant="gold" size="xl" asChild>
+                    <Link to="/contact">
+                      Book Free 20-Min Call <ArrowRight className="ml-2" />
+                    </Link>
+                  </Button>
+                  <Button variant="heroOutline" size="xl" asChild>
+                    <Link to="/services#detox">
+                      Explore D.E.T.O.X. Program
+                    </Link>
+                  </Button>
+                </div>
+                <p className="text-primary-foreground/50 text-xs font-medium">
+                  ✦ No commitment required • 100% free • Results guaranteed ✦
+                </p>
+              </ScrollReveal>
 
-            {/* Trust badges */}
-            <ScrollReveal delay={0.4}>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <div className="inline-flex items-center gap-2 glass-dark rounded-full px-4 py-2">
-                  <div className="flex -space-x-2">
-                    {[...Array(4)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="w-7 h-7 rounded-full bg-gold/15 border-2 border-[hsl(230,30%,12%)] flex items-center justify-center"
-                      >
-                        <Users className="w-3 h-3 text-gold" />
-                      </div>
-                    ))}
+              {/* Trust badges */}
+              <ScrollReveal delay={0.4}>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <div className="inline-flex items-center gap-2 glass-dark rounded-full px-4 py-2">
+                    <div className="flex -space-x-2">
+                      {[...Array(4)].map((_, i) => (
+                        <div
+                          key={i}
+                          className="w-7 h-7 rounded-full bg-gold/15 border-2 border-primary flex items-center justify-center"
+                        >
+                          <Users className="w-3 h-3 text-gold" />
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-primary-foreground/60 text-xs font-medium">
+                      <strong className="text-gold">1000+</strong> transformed
+                    </span>
                   </div>
-                  <span className="text-primary-foreground/60 text-xs font-medium">
-                    <strong className="text-gold">1000+</strong> transformed
-                  </span>
+                  <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
+                    <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                    <span className="text-primary-foreground/60 text-xs font-medium">
+                      <strong className="text-primary-foreground">5.0</strong> Google Rating
+                    </span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
+                    <Shield className="w-3.5 h-3.5 text-gold" />
+                    <span className="text-primary-foreground/60 text-xs font-medium">
+                      <strong className="text-primary-foreground">10+</strong> Years Expert
+                    </span>
+                  </div>
                 </div>
-                <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
-                  <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-                  <span className="text-primary-foreground/60 text-xs font-medium">
-                    <strong className="text-primary-foreground">5.0</strong> Google Rating
-                  </span>
-                </div>
-                <div className="inline-flex items-center gap-1.5 glass-dark rounded-full px-4 py-2">
-                  <Shield className="w-3.5 h-3.5 text-gold" />
-                  <span className="text-primary-foreground/60 text-xs font-medium">
-                    <strong className="text-primary-foreground">10+</strong> Years Expert
-                  </span>
-                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Right — Dr. Yash image */}
+            <ScrollReveal delay={0.3} direction="right">
+              <div className="hidden lg:flex justify-center items-end relative">
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[80%] h-32 bg-gold/10 blur-[60px] rounded-full" />
+                <img
+                  src={yashHero}
+                  alt="Dr. Yash - Mind Detox & Peak Performance Coach"
+                  className="relative z-10 max-h-[75vh] w-auto object-contain drop-shadow-2xl"
+                />
               </div>
             </ScrollReveal>
           </div>
