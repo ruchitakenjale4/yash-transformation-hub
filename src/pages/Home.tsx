@@ -165,7 +165,7 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-primary-foreground/20 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-gold rounded-full animate-pulse-slow" />
           </div>
         </div>
