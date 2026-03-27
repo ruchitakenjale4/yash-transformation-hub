@@ -90,7 +90,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-foreground/70 text-xs font-semibold tracking-wide">
+                <span className="text-primary-foreground/70 text-xs font-semibold tracking-wide">
                   Now accepting new clients for July 2026
                 </span>
               </div>
