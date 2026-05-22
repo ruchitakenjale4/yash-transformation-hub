@@ -21,6 +21,7 @@ import { SectionLabel } from "@/components/SectionLabel";
 import { PainPoints } from "@/components/home/PainPoints";
 import { MidPageCTA } from "@/components/home/MidPageCTA";
 import { StickyCTA } from "@/components/home/StickyCTA";
+import { AuroraBackground } from "@/components/AuroraBackground";
 import heroBg from "@/assets/hero-bg.jpg";
 import yashSpeaking from "@/assets/yash-speaking.jpg";
 
@@ -84,11 +85,12 @@ export default function Home() {
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(230,30%,8%)] via-[hsl(230,30%,8%)]/90 to-transparent" />
+        <AuroraBackground />
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-2xl">
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
+              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 <span className="text-primary-foreground/70 text-xs font-semibold tracking-wide">
                   Now accepting new clients for July 2026
@@ -97,7 +99,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-[0.95]">
-                Unleash the <span className="text-gradient">Infinity</span>
+                Unleash the <span className="text-shimmer">Infinity</span>
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
@@ -222,7 +224,7 @@ export default function Home() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <Link
                   to="/services"
-                  className="group p-6 glass-card rounded-2xl hover:border-gold/40 hover:shadow-md transition-all duration-500 hover:-translate-y-1 h-full flex flex-col"
+                  className="group p-6 glass-card rounded-2xl hover:border-gold/40 hover:shadow-md transition-all duration-500 h-full flex flex-col tilt-card shine-card"
                 >
                   <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-all duration-300 group-hover:scale-110">
                     <feature.icon className="w-7 h-7 text-gold" />
