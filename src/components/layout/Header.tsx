@@ -76,7 +76,9 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="gold" asChild>
-              <Link to="/contact">Get Started</Link>
+              <Link to="/contact" onClick={() => trackLead("Header", "Get Started")}>
+                Get Started
+              </Link>
             </Button>
           </div>
 
@@ -110,7 +112,7 @@ export function Header() {
                 </Link>
               ))}
               <Button variant="gold" className="mt-2" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Link to="/contact" onClick={() => setIsOpen(false) || trackLead("Header Mobile", "Get Started")}>
                   Get Started
                 </Link>
               </Button>

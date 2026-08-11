@@ -38,12 +38,13 @@ export function StickyCTA() {
             </div>
             <div className="flex items-center gap-3 flex-1 sm:flex-none justify-center sm:justify-end">
               <Button variant="gold" size="default" asChild className="text-sm">
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => trackLead("Sticky CTA", "Book Free Call")}>
                   Book Free Call <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
               </Button>
               <a
                 href="tel:+919923715905"
+                onClick={() => trackLead("Sticky CTA", "Call Now")}
                 className="hidden sm:flex items-center gap-2 text-primary-foreground/70 hover:text-gold-light transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" /> Call Now
