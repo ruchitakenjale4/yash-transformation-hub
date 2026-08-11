@@ -95,6 +95,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    trackLead("Contact Form", "Send Message");
     toast({
       title: "Message Sent!",
       description:
@@ -105,6 +106,7 @@ export default function Contact() {
   };
 
   const handleScheduleCall = () => {
+    trackLead("Contact Schedule Call", "WhatsApp Discovery Call");
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       WHATSAPP_MESSAGE
     )}`;
