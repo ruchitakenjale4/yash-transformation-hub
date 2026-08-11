@@ -14,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionLabel } from "@/components/SectionLabel";
+import { useMetaPixelPage } from "@/hooks/useMetaPixel";
+import { trackLead } from "@/lib/metaPixel";
 import servicesHeroBg from "@/assets/services-hero-bg.png";
 
 const services = [

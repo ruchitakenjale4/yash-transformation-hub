@@ -15,6 +15,8 @@ import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionLabel } from "@/components/SectionLabel";
+import { useMetaPixelPage } from "@/hooks/useMetaPixel";
+import { trackLead } from "@/lib/metaPixel";
 
 const WHATSAPP_NUMBER = "919923715905";
 const WHATSAPP_MESSAGE =
