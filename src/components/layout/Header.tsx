@@ -112,7 +112,13 @@ export function Header() {
                 </Link>
               ))}
               <Button variant="gold" className="mt-2" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false) || trackLead("Header Mobile", "Get Started")}>
+                <Link
+                  to="/contact"
+                  onClick={() => {
+                    setIsOpen(false);
+                    trackLead("Header Mobile", "Get Started");
+                  }}
+                >
                   Get Started
                 </Link>
               </Button>
