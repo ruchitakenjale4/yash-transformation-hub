@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { trackLead } from "@/lib/metaPixel";
 import logoDark from "@/assets/logo-dark.png";
 
 const navLinks = [
