@@ -65,6 +65,13 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  useMetaPixelPage({
+    pageName: "Contact",
+    contentName: "Contact Us",
+    contentType: "page",
+    contentCategory: "contact",
+  });
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",

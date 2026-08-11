@@ -148,6 +148,13 @@ const whyDrYash = [
 ];
 
 export default function About() {
+  useMetaPixelPage({
+    pageName: "About",
+    contentName: "About Us",
+    contentType: "page",
+    contentCategory: "about",
+  });
+
   return (
     <Layout>
       <title>

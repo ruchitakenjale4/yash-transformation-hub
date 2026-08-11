@@ -98,6 +98,13 @@ const expertise = [
 ];
 
 export default function Services() {
+  useMetaPixelPage({
+    pageName: "Services",
+    contentName: "Services",
+    contentType: "page",
+    contentCategory: "services",
+  });
+
   return (
     <Layout>
       <title>

@@ -70,6 +70,13 @@ const detoxBenefits = [
 ];
 
 export default function Home() {
+  useMetaPixelPage({
+    pageName: "Home",
+    contentName: "Homepage",
+    contentType: "landing_page",
+    contentCategory: "coaching",
+  });
+
   return (
     <Layout>
       <title>
