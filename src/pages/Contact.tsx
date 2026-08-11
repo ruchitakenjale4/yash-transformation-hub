@@ -15,6 +15,8 @@ import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionLabel } from "@/components/SectionLabel";
+import { useMetaPixelPage } from "@/hooks/useMetaPixel";
+import { trackLead } from "@/lib/metaPixel";
 
 const WHATSAPP_NUMBER = "919923715905";
 const WHATSAPP_MESSAGE =
@@ -63,6 +65,13 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  useMetaPixelPage({
+    pageName: "Contact",
+    contentName: "Contact Us",
+    contentType: "page",
+    contentCategory: "contact",
+  });
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -86,6 +95,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    trackLead("Contact Form", "Send Message");
     toast({
       title: "Message Sent!",
       description:
@@ -96,6 +106,7 @@ export default function Contact() {
   };
 
   const handleScheduleCall = () => {
+    trackLead("Contact Schedule Call", "WhatsApp Discovery Call");
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       WHATSAPP_MESSAGE
     )}`;

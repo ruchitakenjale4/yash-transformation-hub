@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionLabel } from "@/components/SectionLabel";
+import { useMetaPixelPage } from "@/hooks/useMetaPixel";
 import drYashPhoto from "@/assets/dr-yash.png";
 import aboutHeroBg from "@/assets/about-hero-bg.png";
 
@@ -147,6 +148,13 @@ const whyDrYash = [
 ];
 
 export default function About() {
+  useMetaPixelPage({
+    pageName: "About",
+    contentName: "About Us",
+    contentType: "page",
+    contentCategory: "about",
+  });
+
   return (
     <Layout>
       <title>

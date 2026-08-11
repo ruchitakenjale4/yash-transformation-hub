@@ -14,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionLabel } from "@/components/SectionLabel";
+import { useMetaPixelPage } from "@/hooks/useMetaPixel";
+import { trackLead } from "@/lib/metaPixel";
 import servicesHeroBg from "@/assets/services-hero-bg.png";
 
 const services = [
@@ -96,6 +98,13 @@ const expertise = [
 ];
 
 export default function Services() {
+  useMetaPixelPage({
+    pageName: "Services",
+    contentName: "Services",
+    contentType: "page",
+    contentCategory: "services",
+  });
+
   return (
     <Layout>
       <title>
@@ -216,6 +225,12 @@ export default function Services() {
                           ? "noopener noreferrer"
                           : undefined
                       }
+                      onClick={() =>
+                        trackLead(
+                          "Services",
+                          `${service.title} — ${service.cta}`
+                        )
+                      }
                     >
                       {service.cta} <ArrowRight className="ml-2" />
                     </a>
@@ -307,7 +322,9 @@ export default function Services() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/contact">Schedule Discovery Call</Link>
+                  <Link to="/contact" onClick={() => trackLead("Services CTA", "Schedule Discovery Call")}>
+                    Schedule Discovery Call
+                  </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
                   <Link to="/about">Learn About Dr. Yash</Link>

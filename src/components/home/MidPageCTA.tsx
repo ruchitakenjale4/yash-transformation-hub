@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { trackLead } from "@/lib/metaPixel";
 
 export function MidPageCTA() {
   return (
@@ -28,7 +29,7 @@ export function MidPageCTA() {
               </div>
             </div>
             <Button variant="gold" size="lg" asChild className="shrink-0">
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackLead("Mid-Page CTA", "Book My Free Call")}>
                 Book My Free Call <ArrowRight className="ml-2" />
               </Link>
             </Button>

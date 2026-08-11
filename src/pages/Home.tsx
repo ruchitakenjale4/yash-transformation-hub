@@ -22,6 +22,8 @@ import { PainPoints } from "@/components/home/PainPoints";
 import { MidPageCTA } from "@/components/home/MidPageCTA";
 import { StickyCTA } from "@/components/home/StickyCTA";
 import { AuroraBackground } from "@/components/AuroraBackground";
+import { useMetaPixelPage } from "@/hooks/useMetaPixel";
+import { trackLead } from "@/lib/metaPixel";
 import heroBg from "@/assets/hero-bg.jpg";
 import yashSpeaking from "@/assets/yash-speaking.jpg";
 
@@ -68,6 +70,13 @@ const detoxBenefits = [
 ];
 
 export default function Home() {
+  useMetaPixelPage({
+    pageName: "Home",
+    contentName: "Homepage",
+    contentType: "landing_page",
+    contentCategory: "coaching",
+  });
+
   return (
     <Layout>
       <title>
@@ -115,7 +124,7 @@ export default function Home() {
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 mb-4">
                 <Button variant="gold" size="xl" asChild>
-                  <Link to="/contact">
+                  <Link to="/contact" onClick={() => trackLead("Home Hero", "Book Free 20-Min Call")}>
                     Book Free 20-Min Call <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
@@ -347,12 +356,12 @@ export default function Home() {
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Button variant="gold" size="lg" asChild>
-                    <Link to="/contact">
+                    <Link to="/contact" onClick={() => trackLead("Home Why Choose", "Start Your Transformation")}>
                       Start Your Transformation <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
-                    <a href="tel:+919923715905">
+                    <a href="tel:+919923715905" onClick={() => trackLead("Home Why Choose", "Call Phone")}>
                       <Phone className="mr-2 w-4 h-4" /> Call +91 99237 15905
                     </a>
                   </Button>
@@ -413,12 +422,12 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="gold" size="lg" asChild>
-                  <Link to="/contact">
+                  <Link to="/contact" onClick={() => trackLead("Home Final CTA", "Book My Free Discovery Call")}>
                     Book My Free Discovery Call <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="tel:+919923715905">
+                  <a href="tel:+919923715905" onClick={() => trackLead("Home Final CTA", "Call Now")}>
                     <Phone className="mr-2 w-4 h-4" /> Call Now
                   </a>
                 </Button>

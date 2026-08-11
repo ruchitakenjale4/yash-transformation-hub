@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { trackLead } from "@/lib/metaPixel";
 import logoDark from "@/assets/logo-dark.png";
 
 const navLinks = [
@@ -75,7 +76,9 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="gold" asChild>
-              <Link to="/contact">Get Started</Link>
+              <Link to="/contact" onClick={() => trackLead("Header", "Get Started")}>
+                Get Started
+              </Link>
             </Button>
           </div>
 
@@ -109,7 +112,13 @@ export function Header() {
                 </Link>
               ))}
               <Button variant="gold" className="mt-2" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Link
+                  to="/contact"
+                  onClick={() => {
+                    setIsOpen(false);
+                    trackLead("Header Mobile", "Get Started");
+                  }}
+                >
                   Get Started
                 </Link>
               </Button>
