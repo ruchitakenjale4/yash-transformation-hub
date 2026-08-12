@@ -69,3 +69,19 @@ export function trackLead(source: string, label: string) {
     content_category: label,
   });
 }
+
+/**
+ * Replay any events queued before fbq finished loading.
+ */
+export function flushPixelQueue() {
+  if (typeof window === "undefined") return;
+  const w = window as any;
+  const fbq = w.fbq;
+  if (typeof fbq !== "function" || !Array.isArray(w.fbqQueue)) return;
+
+  const queued = w.fbqQueue as Array<{ event: string; params?: PixelParams; custom?: boolean }>;
+  w.fbqQueue = [];
+  queued.forEach(({ event, params, custom }) => {
+    fbq(custom ? "trackCustom" : "track", event, params);
+  });
+}
