@@ -22,7 +22,6 @@ import { PainPoints } from "@/components/home/PainPoints";
 import { MidPageCTA } from "@/components/home/MidPageCTA";
 import { StickyCTA } from "@/components/home/StickyCTA";
 import { AuroraBackground } from "@/components/AuroraBackground";
-import { useMetaPixelPage } from "@/hooks/useMetaPixel";
 import { trackLead } from "@/lib/metaPixel";
 import heroBg from "@/assets/hero-bg.jpg";
 import yashSpeaking from "@/assets/yash-speaking.jpg";
@@ -70,12 +69,6 @@ const detoxBenefits = [
 ];
 
 export default function Home() {
-  useMetaPixelPage({
-    pageName: "Home",
-    contentName: "Homepage",
-    contentType: "landing_page",
-    contentCategory: "coaching",
-  });
 
   return (
     <Layout>
